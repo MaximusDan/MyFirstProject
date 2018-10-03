@@ -34,7 +34,7 @@ public class Main {
 			System.out.println("Введите правильно 1 число");
 			System.out.println("Введите правильно 2 число");
 			
-			if (sc.hasNextInt() && sc1.hasNextInt()) {
+			if (sc.hasNextInt() && sc1.hasNextInt() && value1 > 0) {
 				value = sc.nextInt();
 				value1 = sc1.nextInt();
 

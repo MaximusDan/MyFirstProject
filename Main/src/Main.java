@@ -3,7 +3,7 @@
  * @author Максим Данилович
  */
 
-/** Импортируем класс из библиотеки*/
+/** Импортируем класс из пакета java.util*/
 import java.util.Scanner;
 
 /** Главный класс */
@@ -33,6 +33,7 @@ public class Main {
 			Scanner sc1 = new Scanner(System.in);
 			System.out.println("Введите правильно 1 число");
 			System.out.println("Введите правильно 2 число");
+			
 			if (sc.hasNextInt() && sc1.hasNextInt()) {
 				value = sc.nextInt();
 				value1 = sc1.nextInt();
@@ -42,7 +43,10 @@ public class Main {
 				System.out.println("деление = " + (value / value1));
 				System.out.println("вычитание = " + (value - value1));
 				break;
+			}else {
+				System.out.println("Одно из введенных чисел неверно" );
 			}
+			
 		}
 	}
 }

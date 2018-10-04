@@ -46,8 +46,10 @@ public class Main {
 					System.out.println("вычитание = " + (value - value1));
 					break;
 				} else {
-					System.out.println("Одно из введенных чисел неверно");
+					System.out.println("2 число не должно ровняться 0");
 				}
+			}else {
+				System.out.println("Одно из введенных чисел неверно");
 			}
 		} 
 		

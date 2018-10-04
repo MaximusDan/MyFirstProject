@@ -57,21 +57,21 @@ public class Main {
 		System.out.println();
 		Scanner sc2 = new Scanner(System.in);
 		System.out.println("Введите число");
-		while(true) {
-			/**Проверка, что обьект имеет тип int*/
-			if(sc2.hasNextInt()) {
+		while (true) {
+			/** Проверка, что обьект имеет тип int */
+			if (sc2.hasNextInt()) {
 				value2 = sc2.nextInt();
-				
-				/**Проверяем что бы переменная не была нолем и выводим делители*/
-			if(value2!=0) {
-				for (int i = 1; i <= value2; i++) {
-					if ((value2 % i) == 0) {
-						System.out.println(i);
+
+				/** Проверяем что бы переменная не была нолем и выводим делители */
+				if (value2 != 0) {
+					for (int i = 1; i <= value2; i++) {
+						if ((value2 % i) == 0) {
+							System.out.println(i);
+						}
 					}
+				} else {
+					System.out.println("Введите другое число");
 				}
-			}else {
-				System.out.println("Введите другое число");
-			}
 			}
 		}
 	}

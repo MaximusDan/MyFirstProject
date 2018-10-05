@@ -14,6 +14,7 @@ public class Main {
 
 	public static void lesson2() {
 		int value = 0, value1 = 0, value3 = 0; // value3 - переменная в которую вносится обьект класса sc3.
+		boolean var = false;
 		System.out.println();
 		while (true) {
 			Scanner sc = new Scanner(System.in);
@@ -46,14 +47,12 @@ public class Main {
 					value3 = sc3.nextInt();
 					//if (value3 >= 0 && value3 <= 4) {
 					break;
-					//} else {
-						//System.out.println("Введенное число не попадает в диапазон чисел предложенных вам ранее");
-					//}
 				}
 			}
 			switch (value3) {
 			case 0:
-				System.out.println("Программа звершена");
+				var = true;
+				System.out.println("Программа завершена");
 				break;
 			case 1:
 				System.out.println("сложение = " + (value + value1));
@@ -69,9 +68,8 @@ public class Main {
 				break;
 			 default:
 				 System.out.println("Введенное число не попадает в диапазон чисел предложенных вам ранее");
-	               break;
 			}
-			if(value3 == 0) {
+			if(var = true) {
 				break;
 			}
 		}

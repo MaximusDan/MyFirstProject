@@ -1,3 +1,4 @@
+
 /** 
  * Учебный проект
  * @author Максим Данилович
@@ -9,6 +10,7 @@ public class Main {
 
 	public static void main(String[] args) {
 		int number1 = 0;
+		boolean number2 = false;
 		while (true) {
 			System.out.println("Нажмите 1 для выполнения задания 2");
 			System.out.println("Нажмите 2 для выполнения задания 6");
@@ -19,12 +21,13 @@ public class Main {
 				if (scan1.hasNextInt()) {
 					number1 = scan1.nextInt();
 					break;
-				}else{
+				} else {
 					System.out.println("Введенные символы не являются числом");
 				}
 			}
 			switch (number1) {
 			case 0:
+				number2 = true;
 				System.out.println("Программа завершена");
 				break;
 			case 1:
@@ -36,12 +39,11 @@ public class Main {
 			default:
 				System.out.println("Введенное число неправильное");
 			}
-			if (number1 == 0) {
+			if (number2) {
 				break;
 			}
 		}
 	}
-	
 
 	public static void lesson2() {
 		int value = 0, value1 = 0, value3 = 0; // value3 - переменная в которую вносится обьект класса sc3.
@@ -64,44 +66,44 @@ public class Main {
 				System.out.println("Одно из введенных чисел неверно");
 			}
 		}
-		System.out.println("Теперь введите действия которые Вы хотите совершить");
+		System.out.println("Введите действия которые Вы хотите совершить");
 		while (true) {
-			System.out.println("0 - Закончить действия");
-			System.out.println("1 - Сумма данных чисел");
-			System.out.println("2 - Умножение данных чисел");
-			System.out.println("3 - Деление данных чисел");
-			System.out.println("4 - Вычитание данных чисел");
+			System.out.println("0 - Завершить задачу");
+			System.out.println("1 - Сумма");
+			System.out.println("2 - Умножение");
+			System.out.println("3 - Деление");
+			System.out.println("4 - Вычитание");
 			while (true) {
 				Scanner sc3 = new Scanner(System.in);
 				System.out.println("Сделайте свой выбор");
 				if (sc3.hasNextInt()) {
 					value3 = sc3.nextInt();
 					break;
-				}else{
+				} else {
 					System.out.println("Введенные символы не являются числом");
 				}
 			}
 			switch (value3) {
 			case 0:
 				var = true;
-				System.out.println("Программа завершена");
+				System.out.println("Задача завершена");
 				break;
 			case 1:
-				System.out.println("сложение = " + (value + value1));
+				Main.metod1(value, value1);
 				break;
 			case 2:
-				System.out.println("умножение = " + (value * value1));
+				Main.metod2(value, value1);
 				break;
 			case 3:
-				System.out.println("деление = " + (value / value1));
+				Main.metod3(value, value1);
 				break;
 			case 4:
-				System.out.println("вычитание = " + (value - value1));
+				Main.metod4(value, value1);
 				break;
-			 default:
-				 System.out.println("Введенное число не попадает в диапазон чисел предложенных вам ранее");
+			default:
+				System.out.println("Введенное число не попадает в диапазон чисел предложенных вам ранее");
 			}
-			if(var) {
+			if (var) {
 				break;
 			}
 		}
@@ -128,5 +130,20 @@ public class Main {
 			}
 		}
 	}
+
+	public static void metod1(int a, int b) {
+		System.out.println("сложение = " + (a + b));
+	}
+
+	public static void metod2(int a, int b) {
+		System.out.println("умножение = " + (a * b));
+	}
+
+	public static void metod3(int a, int b) {
+		System.out.println("деление = " + (a / b));
+	}
+
+	public static void metod4(int a, int b) {
+		System.out.println("вычитание = " + (a - b));
+	}
 }
-		

@@ -89,16 +89,16 @@ public class Main {
 				System.out.println("Задача завершена");
 				break;
 			case 1:
-				Main.metod1(value, value1);
+				Arifmetika.summa(value, value1);
 				break;
 			case 2:
-				Main.metod2(value, value1);
+				Arifmetika.ymnojenie(value, value1);
 				break;
 			case 3:
-				Main.metod3(value, value1);
+				Arifmetika.delenie(value, value1);
 				break;
 			case 4:
-				Main.metod4(value, value1);
+				Arifmetika.vuchutanie(value, value1);
 				break;
 			default:
 				System.out.println("Введенное число не попадает в диапазон чисел предложенных вам ранее");
@@ -129,21 +129,5 @@ public class Main {
 				}
 			}
 		}
-	}
-
-	public static void metod1(int a, int b) {
-		System.out.println("сложение = " + (a + b));
-	}
-
-	public static void metod2(int a, int b) {
-		System.out.println("умножение = " + (a * b));
-	}
-
-	public static void metod3(int a, int b) {
-		System.out.println("деление = " + (a / b));
-	}
-
-	public static void metod4(int a, int b) {
-		System.out.println("вычитание = " + (a - b));
 	}
 }

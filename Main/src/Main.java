@@ -9,6 +9,11 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
+		
+		/**Задание 11*/
+		double methodDouble = Arifmetika.methodDouble(3,4,5);
+		System.out.println(methodDouble);
+		
 		int number1 = 0;
 		boolean number2 = false;
 		while (true) {
@@ -89,16 +94,16 @@ public class Main {
 				System.out.println("Задача завершена");
 				break;
 			case 1:
-				Arifmetika.summa(value, value1);
+				Arifmetika.addition(value, value1);
 				break;
 			case 2:
-				Arifmetika.ymnojenie(value, value1);
+				Arifmetika.multiplication(value, value1);
 				break;
 			case 3:
-				Arifmetika.delenie(value, value1);
+				Arifmetika.division(value, value1);
 				break;
 			case 4:
-				Arifmetika.vuchutanie(value, value1);
+				Arifmetika.subtraction(value, value1);
 				break;
 			default:
 				System.out.println("Введенное число не попадает в диапазон чисел предложенных вам ранее");

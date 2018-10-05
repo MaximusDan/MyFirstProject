@@ -34,11 +34,11 @@ public class Main {
 		}
 		System.out.println("Теперь введите действия которые Вы хотите совершить");
 		while (true) {
-			System.out.println("0 - Сумма данных чисел");
-			System.out.println("1 - Умножение данных чисел");
-			System.out.println("2 - Деление данных чисел");
-			System.out.println("3 - Вычитание данных чисел");
-			System.out.println("4 - Закончить действия");
+			System.out.println("0 - Закончить действия");
+			System.out.println("1 - Сумма данных чисел");
+			System.out.println("2 - Умножение данных чисел");
+			System.out.println("3 - Деление данных чисел");
+			System.out.println("4 - Вычитание данных чисел");
 			while (true) {
 				Scanner sc3 = new Scanner(System.in);
 				System.out.println("Сделайте свой выбор");
@@ -52,20 +52,20 @@ public class Main {
 				}
 			}
 			switch (value3) {
-			case 0:
+			case 1:
 				System.out.println("сложение = " + (value + value1));
 				break;
-			case 1:
+			case 2:
 				System.out.println("умножение = " + (value * value1));
 				break;
-			case 2:
+			case 3:
 				System.out.println("деление = " + (value / value1));
 				break;
-			case 3:
+			case 4:
 				System.out.println("вычитание = " + (value - value1));
 				break;
 			}
-			if (value3 == 4) {
+			if (value3 == 0) {
 				break;
 			}
 		}

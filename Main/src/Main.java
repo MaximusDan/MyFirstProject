@@ -44,14 +44,17 @@ public class Main {
 				System.out.println("Сделайте свой выбор");
 				if (sc3.hasNextInt()) {
 					value3 = sc3.nextInt();
-					if (value3 >= 0 && value3 <= 4) {
-						break;
-					} else {
-						System.out.println("Введенное число не попадает в диапазон чисел предложенных вам ранее");
-					}
+					//if (value3 >= 0 && value3 <= 4) {
+					break;
+					//} else {
+						//System.out.println("Введенное число не попадает в диапазон чисел предложенных вам ранее");
+					//}
 				}
 			}
 			switch (value3) {
+			case 0:
+				System.out.println("Программа звершена");
+				break;
 			case 1:
 				System.out.println("сложение = " + (value + value1));
 				break;
@@ -64,8 +67,11 @@ public class Main {
 			case 4:
 				System.out.println("вычитание = " + (value - value1));
 				break;
+			 default:
+				 System.out.println("Введенное число не попадает в диапазон чисел предложенных вам ранее");
+	               break;
 			}
-			if (value3 == 0) {
+			if(value3 == 0) {
 				break;
 			}
 		}

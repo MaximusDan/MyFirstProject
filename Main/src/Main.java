@@ -14,13 +14,13 @@ public class Main {
 		double methodDouble = Arifmetika.methodDouble(3,4,5);
 		System.out.println(methodDouble);
 		
-		int number1 = 0;
+		//int number1 = 0;
 		boolean number2 = false;
 		while (true) {
 			System.out.println("Нажмите 1 для выполнения задания 2");
 			System.out.println("Нажмите 2 для выполнения задания 6");
 			System.out.println("Нажмите 0 если нечего не хотите делать");
-			while (true) {
+			/**while (true) {
 				System.out.println("Какое задание Вы желаете выполнить");
 				Scanner scan1 = new Scanner(System.in);
 				if (scan1.hasNextInt()) {
@@ -29,7 +29,9 @@ public class Main {
 				} else {
 					System.out.println("Введенные символы не являются числом");
 				}
-			}
+			}*/
+			int number1 = Console.methodConsole();
+			
 			switch (number1) {
 			case 0:
 				number2 = true;

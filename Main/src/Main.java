@@ -8,9 +8,40 @@ import java.util.Scanner;
 public class Main {
 
 	public static void main(String[] args) {
-		Main.lesson2();
-		Main.lesson6();
+		int number1 = 0;
+		while (true) {
+			System.out.println("Нажмите 1 для выполнения задания 2");
+			System.out.println("Нажмите 2 для выполнения задания 6");
+			System.out.println("Нажмите 0 если нечего не хотите делать");
+			while (true) {
+				System.out.println("Какое задание Вы желаете выполнить");
+				Scanner scan1 = new Scanner(System.in);
+				if (scan1.hasNextInt()) {
+					number1 = scan1.nextInt();
+					break;
+				}else{
+					System.out.println("Введенные символы не являются числом");
+				}
+			}
+			switch (number1) {
+			case 0:
+				System.out.println("Программа завершена");
+				break;
+			case 1:
+				Main.lesson2();
+				break;
+			case 2:
+				Main.lesson6();
+				break;
+			default:
+				System.out.println("Введенное число неправильное");
+			}
+			if (number1 == 0) {
+				break;
+			}
+		}
 	}
+	
 
 	public static void lesson2() {
 		int value = 0, value1 = 0, value3 = 0; // value3 - переменная в которую вносится обьект класса sc3.
@@ -45,8 +76,9 @@ public class Main {
 				System.out.println("Сделайте свой выбор");
 				if (sc3.hasNextInt()) {
 					value3 = sc3.nextInt();
-					//if (value3 >= 0 && value3 <= 4) {
 					break;
+				}else{
+					System.out.println("Введенные символы не являются числом");
 				}
 			}
 			switch (value3) {
@@ -69,7 +101,7 @@ public class Main {
 			 default:
 				 System.out.println("Введенное число не попадает в диапазон чисел предложенных вам ранее");
 			}
-			if(var = true) {
+			if(var) {
 				break;
 			}
 		}

@@ -5,6 +5,7 @@
  * @author Максим Данилович
  */
 
+/**Главный класс*/
 public class Main {
 
 	public static void main(String[] args) {

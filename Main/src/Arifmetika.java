@@ -1,6 +1,7 @@
-
+/**Класс арифметики*/
 public class Arifmetika {
-
+	
+	/**главное меню класса*/
 	public static void arifmetika() {
 
 		boolean var = false;
@@ -55,7 +56,7 @@ public class Arifmetika {
 			}
 		}
 	}
-
+	/**Метод поиска делителей числа*/
 	public static void lesson6() {
 		int value2 = 0;
 		System.out.println();
@@ -73,23 +74,24 @@ public class Arifmetika {
 			}
 		}
 	}
-
+	/**Метод суммы двух чисел*/
 	public static void addition(int a, int b) {
 		System.out.println("сложение = " + (a + b));
 	}
-
+	/**Метод умножения двух чисел*/
 	public static void multiplication(int a, int b) {
 		System.out.println("умножение = " + (a * b));
 	}
-
+	/**Метод деления двух чисел*/
 	public static void division(int a, int b) {
 		System.out.println("деление = " + (a / b));
 	}
-
+	/**Метод вычитани двух чисел*/
 	public static void subtraction(int a, int b) {
 		System.out.println("вычитание = " + (a - b));
 	}
 
+	/**Метод задания 11*/
 	public static double methodDouble(double a, double b, double c) {
 		double i = ((a + b) * c) / (a - b);
 		return i;

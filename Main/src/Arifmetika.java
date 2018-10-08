@@ -26,6 +26,7 @@ public class Arifmetika {
 			System.out.println("3 - Деление");
 			System.out.println("4 - Вычитание");
 			System.out.println("5 - Найти делители числа");
+			System.out.println("6 - Найти модуль числа");
 			int value3 = Console.methodConsole();
 
 			switch (value3) {
@@ -47,6 +48,9 @@ public class Arifmetika {
 				break;
 			case 5:
 				Arifmetika.lesson6();
+				break;
+			case 6:
+				Arifmetika.methodModule();
 				break;
 			default:
 				System.out.println("Введенное число не попадает в диапазон чисел предложенных вам ранее");
@@ -96,5 +100,20 @@ public class Arifmetika {
 		double i = ((a + b) * c) / (a - b);
 		return i;
 
+	}
+	/** Метод нахождения модуля числа*/
+	public static double methodModule() {
+		int value4 = 0;
+		System.out.println();
+		System.out.println("Введите число модуль которого Вы желаете найти");
+		while (true) {
+			value4 = Console.methodConsole();
+			if (value4 >= 0) {
+				System.out.println(value4);
+			}
+			if (value4 < 0) {
+				System.out.println(0 + (-0) + (-value4) );
+				}
+		}
 	}
 }

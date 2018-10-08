@@ -1,41 +1,8 @@
 
 public class Arifmetika {
-	
+
 	public static void arifmetika() {
-		
-		/** Задание 11 */
-		double methodDouble = Arifmetika.methodDouble(3, 4, 5);
-		System.out.println(methodDouble);
-		
-		
-		boolean number2 = false;
-		while (true) {
-			System.out.println("Нажмите 1 для выполнения задания 2");
-			System.out.println("Нажмите 2 для выполнения задания 6");
-			System.out.println("Нажмите 0 если нечего не хотите делать");
-			
-			/** Переброс в метод */
-			int number1 = Console.methodConsole();
-			switch (number1) {
-			case 0:
-				number2 = true;
-				System.out.println("Программа завершена");
-				break;
-			case 1:
-				Arifmetika.lesson2();
-				break;
-			case 2:
-				Arifmetika.lesson6();
-				break;
-			default:
-				System.out.println("Введенное число неправильное");
-			}
-			if (number2) {
-				break;
-			}
-		}
-	}
-	public static void lesson2() {
+
 		boolean var = false;
 		System.out.println();
 		int value = 0, value1 = 0;
@@ -57,6 +24,7 @@ public class Arifmetika {
 			System.out.println("2 - Умножение");
 			System.out.println("3 - Деление");
 			System.out.println("4 - Вычитание");
+			System.out.println("5 - Найти делители числа");
 			int value3 = Console.methodConsole();
 
 			switch (value3) {
@@ -76,6 +44,9 @@ public class Arifmetika {
 			case 4:
 				Arifmetika.subtraction(value, value1);
 				break;
+			case 5:
+				Arifmetika.lesson6();
+				break;
 			default:
 				System.out.println("Введенное число не попадает в диапазон чисел предложенных вам ранее");
 			}
@@ -88,7 +59,7 @@ public class Arifmetika {
 	public static void lesson6() {
 		int value2 = 0;
 		System.out.println();
-		System.out.println("Задание 6: введите число");
+		System.out.println("Введите число делители которого Вы желаете найти");
 		while (true) {
 			value2 = Console.methodConsole();
 			if (value2 != 0) {
@@ -102,8 +73,7 @@ public class Arifmetika {
 			}
 		}
 	}
-	
-	
+
 	public static void addition(int a, int b) {
 		System.out.println("сложение = " + (a + b));
 	}
@@ -119,10 +89,10 @@ public class Arifmetika {
 	public static void subtraction(int a, int b) {
 		System.out.println("вычитание = " + (a - b));
 	}
-	public static double methodDouble(double a,double b, double c){
-		double i = ((a + b) * c ) / (a - b);
+
+	public static double methodDouble(double a, double b, double c) {
+		double i = ((a + b) * c) / (a - b);
 		return i;
-		
+
 	}
-	
 }

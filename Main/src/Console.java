@@ -21,12 +21,10 @@ public class Console {
 	}
 	/** Метод консольного ввода типа double*/
 	public static double methodConsoleDouble() {
-		double number = 0;
 		while (true) {
 			Scanner sc = new Scanner(System.in);
 			if (sc.hasNextDouble()) {
-				number = sc.nextDouble();
-				return number;
+				return sc.nextDouble();
 			} else {
 				System.out.println("Введенные символы не являются числом");
 			}

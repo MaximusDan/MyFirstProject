@@ -10,10 +10,6 @@ public class Main {
 
 	public static void main(String[] args) {
 
-		/** Задание 11 */
-		double methodDouble = Arifmetika.methodDouble(3, 4, 5);
-		System.out.println(methodDouble);
-
 		/** Главное меню прложения */
 		boolean number2 = false;
 		while (true) {
@@ -27,7 +23,7 @@ public class Main {
 				System.out.println("Программа завершена");
 				break;
 			case 1:
-				Arifmetika.arifmetika();
+				Arifmetika.arifmetikaMenu();
 				break;
 			default:
 				System.out.println("Введенное число неправильное");

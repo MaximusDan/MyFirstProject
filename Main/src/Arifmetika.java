@@ -15,7 +15,7 @@ public class Arifmetika {
 			System.out.println("4 - Вычитание");
 			System.out.println("5 - Найти делители числа");
 			System.out.println("6 - Найти модуль числа");
-
+			System.out.println("7 - Заполнить массив");
 			int value3 = Console.methodConsole();
 
 			switch (value3) {
@@ -61,6 +61,9 @@ public class Arifmetika {
 				double value4 = Console.methodConsoleDouble(); 
 				Arifmetika.methodModule(value4); 
 				break;
+			case 7:
+				Arifmetika.newMass(); 
+				break;
 			default:
 				System.out.println("Введенное число не попадает в диапазон чисел предложенных вам ранее");
 			}
@@ -70,26 +73,26 @@ public class Arifmetika {
 		}
 	}
 
-	/** Метод суммы двух чисел */
+	/**@param value, value1 значения переменных,  метод нахождения их суммы */
 	public static void addition(int a, int b) {
 		System.out.println("сложение = " + (a + b));
 	}
 
-	/** Метод умножения двух чисел */
+	/**@param value, value1 значения переменных,  метод их умножения */
 	public static void multiplication(int a, int b) {
 		System.out.println("умножение = " + (a * b));
 	}
 
-	/** Метод деления двух чисел */
+	/**@param value, value1 значения переменных,  метод нахождения их деления */
 	public static void division(int a, int b) {
 		System.out.println("деление = " + (a / b));
 	}
 
-	/** Метод вычитани двух чисел */
+	/**@param value, value1 значения переменных,  метод нахождения их вычитания */
 	public static void subtraction(int a, int b) {
 		System.out.println("вычитание = " + (a - b));
 	}
-	/** Метод нахождения делителей */
+	/** @param value2 значение переменной, метод нахождения его делителей */
 	public static void methodDivider(int a) {
 		for (int i = 1; i <= a; i++) {
 			if ((a % i) == 0) {
@@ -98,7 +101,7 @@ public class Arifmetika {
 		}
 	}
 
-	/** Метод нахождения модуля чила */
+	/** @param value4 значение переменной, метод нахождения его модуля */
 	public static void methodModule(double a) {
 		if (a >= 0) {
 			System.out.println(a);

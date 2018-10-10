@@ -16,7 +16,7 @@ public class Main {
 			System.out.println("Нажмите 1 для выполнения арифметических действий");
 			System.out.println("Нажмите 0 если нечего не хотите делать");
 
-			switch (Console.methodConsole()) {
+			switch (Console.readFromConsoleIntValue()) {
 			case 0:
 				stopProject = true;
 				System.out.println("Программа завершена");

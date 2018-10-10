@@ -3,24 +3,20 @@ import java.util.Scanner;
 public class Console {
 	
 	/** Метод консольного ввода*/
-	public static int methodConsole() {
+	public static int readFromConsoleIntValue() {
 		int number = 0;
 		while (true) {
 			Scanner sc = new Scanner(System.in);
 			if (sc.hasNextInt()) {
 				number = sc.nextInt();
-				if(number != 0) {
 					return number;
-				}else {
-					System.out.println("2 число не должно ровняться 0");
-				}
 			} else {
 				System.out.println("Введенные символы не являются числом");
 			}
 		}
 	}
-	/** Метод консольного ввода типа double*/
-	public static double methodConsoleDouble() {
+	/** Метод массива*/
+	public static double readFromConsoleDoubleValue() {
 		while (true) {
 			Scanner sc = new Scanner(System.in);
 			if (sc.hasNextDouble()) {

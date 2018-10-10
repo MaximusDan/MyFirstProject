@@ -61,9 +61,9 @@ public class Arifmetika {
 				double value4 = Console.methodConsoleDouble(); 
 				Arifmetika.methodModule(value4); 
 				break;
-			case 7:
-				Arifmetika.newMass(); 
-				break;
+			//case 7:
+				//Arifmetika.newMass(); 
+				//break;
 			default:
 				System.out.println("Введенное число не попадает в диапазон чисел предложенных вам ранее");
 			}
@@ -107,7 +107,7 @@ public class Arifmetika {
 			System.out.println(a);
 		}
 		if (a < 0) {
-			System.out.println(0 + (-0) + (-a));
+			System.out.println(a *(-1));
 		}
 	}
 }

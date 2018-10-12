@@ -5,10 +5,10 @@
  * @author Максим Данилович
  */
 
-/**Главный класс*/
+/**Главный класс. Сожержит главное меню программы*/
 public class Main {
 	
-	/** Главное меню прложения */
+	/** Главное меню программы */
 	public static void main(String[] args) {
 
 		boolean stopProject = false;

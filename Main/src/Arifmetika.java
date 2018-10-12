@@ -1,8 +1,8 @@
-/** Класс арифметики */
+/** Класс арифметики. Содержит методы с арифметическими операциями */
 public class Arifmetika {
 	
 	
-	/** главное меню класса */
+	/** Главное меню класса арифметика */
 	public static void arifmetikaMenu() {
 		System.out.println("Введите действия которые Вы хотите совершить");
 		int value = 0, value1 = 0, value2 = 0;
@@ -79,26 +79,37 @@ public class Arifmetika {
 		}
 	}
 
-	/**@param value, value1 значения переменных,  метод нахождения их суммы */
+	/**Метод нахождения суммы переменных
+	 * @param value, value1 значения переменных
+	 */
 	public static void add(int a, int b) {
 		System.out.println("сложение = " + (a + b));
 	}
 
-	/**@param value, value1 значения переменных,  метод их умножения */
+	/**Метод умножения переменных
+	 * @param value, value1 значения переменных
+	 */
 	public static void multiply(int a, int b) {
 		System.out.println("умножение = " + (a * b));
 	}
 
-	/**@param value, value1 значения переменных,  метод нахождения их деления */
+	/**Метод деления переменных
+	 * @param value, value1 значения переменных
+	 */
 	public static void divis(int a, int b) {
 		System.out.println("деление = " + (a / b));
 	}
 
-	/**@param value, value1 значения переменных,  метод нахождения их вычитания */
+	/**Метод вычитания переменных
+	 * @param value, value1 значения переменных
+	 */
 	public static void subtract(int a, int b) {
 		System.out.println("вычитание = " + (a - b));
 	}
-	/** @param value2 значение переменной, метод нахождения его делителей */
+	
+	/** Метод нахождения делителей числа
+	 * @param value2 значение переменной
+	 */
 	public static void Divider(int a) {
 		for (int i = 1; i <= a; i++) {
 			if ((a % i) == 0) {
@@ -107,7 +118,9 @@ public class Arifmetika {
 		}
 	}
 
-	/** @param value4 значение переменной, метод нахождения его модуля */
+	/** Метод нахождения модуля числа
+	 * @param value4 значение переменной
+	 */
 	public static void Module(double a) {
 		if (a >= 0) {
 			System.out.println(a);
@@ -116,7 +129,8 @@ public class Arifmetika {
 			System.out.println(a *(-1));
 		}
 	}
-	/** Метод нахождения его модуля */
+	/** Метод нахождения массива
+    */
 	public static void newMass() {
 		System.out.println("Введите длинну массива");
 		int m = Console.readFromConsoleIntValue();

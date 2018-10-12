@@ -1,8 +1,10 @@
 import java.util.Scanner;
-/**Класс консольного ввода*/
+/**Класс консольного ввода. Содержит методы считываия с консоли.*/
 public class Console {
 	
-	/** Метод консольного ввода*/
+	/** Метод консольного ввода
+	 * @return - возвращает значение Int считываемое с консоли
+	 * */
 	public static int readFromConsoleIntValue() {
 		int number = 0;
 		while (true) {
@@ -15,7 +17,9 @@ public class Console {
 			}
 		}
 	}
-	/** Метод массива*/
+	/** Метод консольного ввода
+	 * @return - возвращает значение Double считываемое с консоли
+	 * */
 	public static double readFromConsoleDoubleValue() {
 		while (true) {
 			Scanner sc = new Scanner(System.in);

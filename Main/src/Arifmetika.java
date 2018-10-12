@@ -65,7 +65,8 @@ public class Arifmetika {
 			case 6:
 				System.out.println("Введите число модуль которого Вы желаете найти");
 				double value4 = Console.readFromConsoleDoubleValue(); 
-				Arifmetika.Module(value4); 
+				double a = Arifmetika.Module(value4); 
+				System.out.println(a);
 				break;
 			case 7:
 				Arifmetika.newMass(); 
@@ -121,13 +122,14 @@ public class Arifmetika {
 	/** Метод нахождения модуля числа
 	 * @param value4 значение переменной
 	 */
-	public static void Module(double a) {
+	public static double Module(double a) {
 		if (a >= 0) {
-			System.out.println(a);
+			a = a;
 		}
 		if (a < 0) {
-			System.out.println(a *(-1));
+			a= (a *(-1));
 		}
+		return a;
 	}
 	/** Метод нахождения массива
     */

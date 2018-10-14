@@ -1,8 +1,8 @@
 /** Класс арифметики. Содержит методы с арифметическими операциями */
-public class Arifmetika {
+public class Arithmetic {
 
 	/** Главное меню класса арифметика */
-	public static void arifmetikaMenu() {
+	public static void arithmeticMenu() {
 		System.out.println("Введите действия которые Вы хотите совершить");
 		int value = 0, value1 = 0, value2 = 0;
 		while (true) {
@@ -13,12 +13,11 @@ public class Arifmetika {
 			System.out.println("4 - Вычитание");
 			System.out.println("5 - Найти делители числа");
 			System.out.println("6 - Найти модуль числа");
-			System.out.println("7 - Заполнить массив");
 
-			boolean stopMethodArifmetika = false;
+			boolean stopMethodArithmetic = false;
 			switch (Console.readFromConsoleIntValue()) {
 			case 0:
-				stopMethodArifmetika = true;
+				stopMethodArithmetic = true;
 				System.out.println("Задача завершена");
 				break;
 			case 1:
@@ -26,14 +25,14 @@ public class Arifmetika {
 				value = Console.readFromConsoleIntValue();
 				System.out.println("Введите второе число");
 				value1 = Console.readFromConsoleIntValue();
-				Arifmetika.add(value, value1);
+				Arithmetic.add(value, value1);
 				break;
 			case 2:
 				System.out.println("Введите первое число");
 				value = Console.readFromConsoleIntValue();
 				System.out.println("Введите второе число");
 				value1 = Console.readFromConsoleIntValue();
-				Arifmetika.multiply(value, value1);
+				Arithmetic.multiply(value, value1);
 				break;
 			case 3:
 				System.out.println("Введите первое число");
@@ -47,33 +46,30 @@ public class Arifmetika {
 						System.out.println("2 число не должно ровняться 0");
 					}
 				}
-				Arifmetika.divis(value, value1);
+				Arithmetic.divis(value, value1);
 				break;
 			case 4:
 				System.out.println("Введите первое число");
 				value = Console.readFromConsoleIntValue();
 				System.out.println("Введите второе число");
 				value1 = Console.readFromConsoleIntValue();
-				Arifmetika.subtract(value, value1);
+				Arithmetic.subtract(value, value1);
 				break;
 			case 5:
 				System.out.println("Введите число делители которого Вы желаете найти");
 				value2 = Console.readFromConsoleIntValue();
-				Arifmetika.createDivider(value2);
+				Arithmetic.createDivider(value2);
 				break;
 			case 6:
 				System.out.println("Введите число модуль которого Вы желаете найти");
 				double value4 = Console.readFromConsoleDoubleValue();
-				double showModule = Arifmetika.createModule(value4);
+				double showModule = Arithmetic.createModule(value4);
 				System.out.println(showModule);
-				break;
-			case 7:
-				Arifmetika.newMass();
 				break;
 			default:
 				System.out.println("Введенное число не попадает в диапазон чисел предложенных вам ранее");
 			}
-			if (stopMethodArifmetika) {
+			if (stopMethodArithmetic) {
 				break;
 			}
 		}
@@ -141,15 +137,5 @@ public class Arifmetika {
 			module = (module * (-1));
 		}
 		return module;
-	}
-
-	/**
-	 * Метод нахождения массива
-	 */
-	public static void newMass() {
-		System.out.println("Введите длинну массива");
-		int console = Console.readFromConsoleIntValue();
-		int[] massiv = Matrix.createMass(console);
-		Matrix.showMass(massiv);
 	}
 }

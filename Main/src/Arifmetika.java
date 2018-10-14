@@ -1,7 +1,6 @@
 /** Класс арифметики. Содержит методы с арифметическими операциями */
 public class Arifmetika {
-	
-	
+
 	/** Главное меню класса арифметика */
 	public static void arifmetikaMenu() {
 		System.out.println("Введите действия которые Вы хотите совершить");
@@ -15,11 +14,11 @@ public class Arifmetika {
 			System.out.println("5 - Найти делители числа");
 			System.out.println("6 - Найти модуль числа");
 			System.out.println("7 - Заполнить массив");
-			
-			boolean stopVoidArifmetika = false;
+
+			boolean stopMethodArifmetika = false;
 			switch (Console.readFromConsoleIntValue()) {
 			case 0:
-				stopVoidArifmetika = true;
+				stopMethodArifmetika = true;
 				System.out.println("Задача завершена");
 				break;
 			case 1:
@@ -40,11 +39,11 @@ public class Arifmetika {
 				System.out.println("Введите первое число");
 				value = Console.readFromConsoleIntValue();
 				System.out.println("Введите второе число");
-				while(true) {
+				while (true) {
 					value1 = Console.readFromConsoleIntValue();
-					if(value1 != 0) {
+					if (value1 != 0) {
 						break;
-					}else {
+					} else {
 						System.out.println("2 число не должно ровняться 0");
 					}
 				}
@@ -60,83 +59,97 @@ public class Arifmetika {
 			case 5:
 				System.out.println("Введите число делители которого Вы желаете найти");
 				value2 = Console.readFromConsoleIntValue();
-				Arifmetika.Divider(value2);
+				Arifmetika.createDivider(value2);
 				break;
 			case 6:
 				System.out.println("Введите число модуль которого Вы желаете найти");
-				double value4 = Console.readFromConsoleDoubleValue(); 
-				double a = Arifmetika.Module(value4); 
-				System.out.println(a);
+				double value4 = Console.readFromConsoleDoubleValue();
+				double showModule = Arifmetika.createModule(value4);
+				System.out.println(showModule);
 				break;
 			case 7:
-				Arifmetika.newMass(); 
+				Arifmetika.newMass();
 				break;
 			default:
 				System.out.println("Введенное число не попадает в диапазон чисел предложенных вам ранее");
 			}
-			if (stopVoidArifmetika) {
+			if (stopMethodArifmetika) {
 				break;
 			}
 		}
 	}
 
-	/**Метод нахождения суммы переменных
-	 * @param value, value1 значения переменных
+	/**
+	 * Метод нахождения суммы переменных
+	 * 
+	 * @param variableA,variableB значения переменных
 	 */
-	public static void add(int a, int b) {
-		System.out.println("сложение = " + (a + b));
+	public static void add(int variableA, int variableB) {
+		System.out.println("сложение = " + (variableA + variableB));
 	}
 
-	/**Метод умножения переменных
-	 * @param value, value1 значения переменных
+	/**
+	 * Метод умножения переменных
+	 * 
+	 * @param variableA,variableB значения переменных
 	 */
-	public static void multiply(int a, int b) {
-		System.out.println("умножение = " + (a * b));
+	public static void multiply(int variableA, int variableB) {
+		System.out.println("умножение = " + (variableA * variableB));
 	}
 
-	/**Метод деления переменных
-	 * @param value, value1 значения переменных
+	/**
+	 * Метод деления переменных
+	 * 
+	 * @param variableA,variableB значения переменных
 	 */
-	public static void divis(int a, int b) {
-		System.out.println("деление = " + (a / b));
+	public static void divis(int variableA, int variableB) {
+		System.out.println("деление = " + (variableA / variableB));
 	}
 
-	/**Метод вычитания переменных
-	 * @param value, value1 значения переменных
+	/**
+	 * Метод вычитания переменных
+	 * 
+	 * @param variableA,variableB значения переменных
 	 */
-	public static void subtract(int a, int b) {
-		System.out.println("вычитание = " + (a - b));
+	public static void subtract(int variableA, int variableB) {
+		System.out.println("вычитание = " + (variableA - variableB));
 	}
-	
-	/** Метод нахождения делителей числа
-	 * @param value2 значение переменной
+
+	/**
+	 * Метод нахождения делителей числа
+	 * 
+	 * @param variableA, значение переменной
 	 */
-	public static void Divider(int a) {
-		for (int i = 1; i <= a; i++) {
-			if ((a % i) == 0) {
-				System.out.println(i);
+	public static void createDivider(int variable) {
+		for (int divider = 1; divider <= variable; divider++) {
+			if ((variable % divider) == 0) {
+				System.out.println(divider);
 			}
 		}
 	}
 
-	/** Метод нахождения модуля числа
-	 * @param value4 значение переменной
+	/**
+	 * Метод нахождения модуля числа
+	 * 
+	 * @param module значение переменной
 	 */
-	public static double Module(double a) {
-		if (a >= 0) {
-			a = a;
+	public static double createModule(double module) {
+		if (module >= 0) {
+			module = module;
 		}
-		if (a < 0) {
-			a= (a *(-1));
+		if (module < 0) {
+			module = (module * (-1));
 		}
-		return a;
+		return module;
 	}
-	/** Метод нахождения массива
-    */
+
+	/**
+	 * Метод нахождения массива
+	 */
 	public static void newMass() {
 		System.out.println("Введите длинну массива");
-		int m = Console.readFromConsoleIntValue();
-		int [] massiv = Matrix.createMass(m);
+		int console = Console.readFromConsoleIntValue();
+		int[] massiv = Matrix.createMass(console);
 		Matrix.showMass(massiv);
 	}
 }

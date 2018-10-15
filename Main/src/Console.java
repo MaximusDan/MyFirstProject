@@ -5,16 +5,13 @@ public class Console {
 
 	/**
 	 * Метод консольного ввода
-	 * 
 	 * @return - возвращает значение Int считываемое с консоли
 	 */
 	public static int readFromConsoleIntValue() {
-		int number = 0;
 		while (true) {
 			Scanner sc = new Scanner(System.in);
 			if (sc.hasNextInt()) {
-				number = sc.nextInt();
-				return number;
+				return sc.nextInt();
 			} else {
 				System.out.println("Введенные символы не являются числом");
 			}
@@ -23,7 +20,6 @@ public class Console {
 
 	/**
 	 * Метод консольного ввода
-	 * 
 	 * @return - возвращает значение Double считываемое с консоли
 	 */
 	public static double readFromConsoleDoubleValue() {

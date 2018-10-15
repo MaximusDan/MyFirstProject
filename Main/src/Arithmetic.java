@@ -76,8 +76,7 @@ public class Arithmetic {
 	}
 
 	/**
-	 * Метод нахождения суммы переменных
-	 * 
+	 * Метод нахождения суммы переменных 
 	 * @param variableA,variableB значения переменных
 	 */
 	public static void add(int variableA, int variableB) {
@@ -86,7 +85,6 @@ public class Arithmetic {
 
 	/**
 	 * Метод умножения переменных
-	 * 
 	 * @param variableA,variableB значения переменных
 	 */
 	public static void multiply(int variableA, int variableB) {
@@ -94,8 +92,7 @@ public class Arithmetic {
 	}
 
 	/**
-	 * Метод деления переменных
-	 * 
+	 * Метод деления переменных 
 	 * @param variableA,variableB значения переменных
 	 */
 	public static void divis(int variableA, int variableB) {
@@ -104,7 +101,6 @@ public class Arithmetic {
 
 	/**
 	 * Метод вычитания переменных
-	 * 
 	 * @param variableA,variableB значения переменных
 	 */
 	public static void subtract(int variableA, int variableB) {
@@ -113,7 +109,6 @@ public class Arithmetic {
 
 	/**
 	 * Метод нахождения делителей числа
-	 * 
 	 * @param variableA, значение переменной
 	 */
 	public static void createDivider(int variable) {
@@ -125,8 +120,7 @@ public class Arithmetic {
 	}
 
 	/**
-	 * Метод нахождения модуля числа
-	 * 
+	 * Метод нахождения модуля числа 
 	 * @param module значение переменной
 	 */
 	public static double createModule(double module) {
@@ -137,5 +131,17 @@ public class Arithmetic {
 			module = (module * (-1));
 		}
 		return module;
+	}
+	
+	
+	/**
+	 * Метод нахождения рандомного значения из диапазона 
+	 * @param randomMin минимальное значение диапазона
+	 * @param randomMax максимальное значение диапазона
+	 */
+	
+	public static int createRandom(int randomMin, int randomMax) {
+		int a = (int) (Math.random() * (randomMax - randomMin + 1)) + randomMin;
+		return a;
 	}
 }

@@ -1,12 +1,14 @@
 
 /** Класс матриц. Содержит методы с матрицами и массивами. */
 public class Matrix {
-	public static int[] massiv;
+	/** Главное меню класса Matrix */
 	public static void menuMatrix() {
+		int[] massiv = null;
 		while (true) {
 			System.out.println("Нажмите 0 если нечего не хотите делать");
 			System.out.println("Нажмите 1 для создания и заполнения массива");
 			System.out.println("Нажмите 2 для вывода массива");
+			
 			boolean stopMethodMatrix = false;
 			switch (Console.readFromConsoleIntValue()) {
 			case 0:
@@ -27,16 +29,18 @@ public class Matrix {
 	}
 	/**
 	 * Метод создания и заполнения массива
-	 * 
 	 * @param length количество элементов в массиве(длина массива)
 	 */
 	public static int[] createMass() {
 		System.out.println("Введите длину массива");
 		int massLength = Console.readFromConsoleIntValue();
 		int[] mass = new int[massLength];
+		System.out.println("Введите минимальное значение массива");
+		int randomMin = Console.readFromConsoleIntValue();
+		System.out.println("Введите максимальное значение массива");
+		int randomMax = Console.readFromConsoleIntValue();
 		for (int i = 0; i < mass.length; i++) {
-			mass[i] = (int) (Math.random() * 100) + 1;
-
+			mass[i] = Arithmetic.createRandom(randomMin,randomMax);
 		}
 		return mass;
 	}

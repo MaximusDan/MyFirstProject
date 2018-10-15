@@ -4,10 +4,12 @@ public class Matrix {
 	/** Главное меню класса Matrix */
 	public static void menuMatrix() {
 		int[] massiv = null;
+		int average = 0;
 		while (true) {
 			System.out.println("Нажмите 0 если нечего не хотите делать");
 			System.out.println("Нажмите 1 для создания и заполнения массива");
-			System.out.println("Нажмите 2 для вывода массива");
+			System.out.println("Нажмите 2 для подсчета среднего арифметического элементов массива");
+			System.out.println("Нажмите 3 для вывода массива");
 			
 			boolean stopMethodMatrix = false;
 			switch (Console.readFromConsoleIntValue()) {
@@ -19,6 +21,10 @@ public class Matrix {
 				massiv = Matrix.createMass();
 				break;
 			case 2:
+				average = Matrix.averageArithmetic(massiv);
+				System.out.println(average);
+				break;
+			case 3:
 				Matrix.showMass(massiv);
 				break;
 			}
@@ -43,6 +49,19 @@ public class Matrix {
 			mass[i] = Arithmetic.createRandom(randomMin,randomMax);
 		}
 		return mass;
+	}
+	
+	/** Метод нахождения среднего арифметического элементов массива 
+	 * @return - возвращает среднее арифметическое
+	 * */
+	
+	public static int averageArithmetic(int[] average) {
+		int value = 0, value1 = 0;
+		for (int i = 0; i < average.length; i++) {
+			value = value + average[i];
+			value1++;
+		}
+		return value / value1;
 	}
 
 	/** Метод вывода массива */

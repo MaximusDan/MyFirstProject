@@ -70,12 +70,11 @@ public class Matrix {
 	 * */
 	
 	public static int averageArithmetic(int[] average) {
-		int value = 0, value1 = 0;
+		int value = 0;
 		for (int i = 0; i < average.length; i++) {
 			value = value + average[i];
-			value1++;
 		}
-		return value / value1;
+		return value / average.length;
 	}
 	/** Метод выяснения есть ли в массиве число которое введи с консоли. 
 	 * @return - возвращает true или false

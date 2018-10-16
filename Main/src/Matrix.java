@@ -1,5 +1,8 @@
-
-/** Класс матриц. Содержит методы с матрицами и массивами. */
+/**
+ * @author Максим Данилович
+ * 
+ * Класс матриц. Содержит методы с матрицами и массивами. 
+ */
 public class Matrix {
 	/** Главное меню класса Matrix */
 	public static void menuMatrix() {
@@ -49,7 +52,8 @@ public class Matrix {
 	}
 	/**
 	 * Метод создания и заполнения массива
-	 * @param length количество элементов в массиве(длина массива)
+	 * @value length количество элементов в массиве(длина массива)
+	 * @return возвращает массив
 	 */
 	public static int[] createMass() {
 		System.out.println("Введите длину массива");
@@ -60,7 +64,7 @@ public class Matrix {
 		System.out.println("Введите максимальное значение массива");
 		int randomMax = Console.readFromConsoleIntValue();
 		for (int i = 0; i < mass.length; i++) {
-			mass[i] = Arithmetic.createRandom(randomMin,randomMax);
+			mass[i] = Arithmetic.createRandom(randomMin, randomMax);
 		}
 		return mass;
 	}

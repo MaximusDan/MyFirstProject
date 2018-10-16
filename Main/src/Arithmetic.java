@@ -1,4 +1,8 @@
-/** Класс арифметики. Содержит методы с арифметическими операциями */
+/**
+ * @author Максим Данилович
+ * 
+ * Класс арифметики. Содержит методы с арифметическими операциями 
+ */
 public class Arithmetic {
 
 	/** Главное меню класса арифметика */
@@ -77,7 +81,7 @@ public class Arithmetic {
 
 	/**
 	 * Метод нахождения суммы переменных 
-	 * @param variableA,variableB значения переменных
+	 * @value variableA,variableB
 	 */
 	public static void add(int variableA, int variableB) {
 		System.out.println("сложение = " + (variableA + variableB));
@@ -85,7 +89,7 @@ public class Arithmetic {
 
 	/**
 	 * Метод умножения переменных
-	 * @param variableA,variableB значения переменных
+	 * @value variableA,variableB 
 	 */
 	public static void multiply(int variableA, int variableB) {
 		System.out.println("умножение = " + (variableA * variableB));
@@ -93,7 +97,7 @@ public class Arithmetic {
 
 	/**
 	 * Метод деления переменных 
-	 * @param variableA,variableB значения переменных
+	 * @value variableA,variableB
 	 */
 	public static void divis(int variableA, int variableB) {
 		System.out.println("деление = " + (variableA / variableB));
@@ -101,7 +105,7 @@ public class Arithmetic {
 
 	/**
 	 * Метод вычитания переменных
-	 * @param variableA,variableB значения переменных
+	 * @value variableA,variableB 
 	 */
 	public static void subtract(int variableA, int variableB) {
 		System.out.println("вычитание = " + (variableA - variableB));
@@ -109,7 +113,7 @@ public class Arithmetic {
 
 	/**
 	 * Метод нахождения делителей числа
-	 * @param variableA, значение переменной
+	 * @value variableA
 	 */
 	public static void createDivider(int variable) {
 		for (int divider = 1; divider <= variable; divider++) {
@@ -121,7 +125,7 @@ public class Arithmetic {
 
 	/**
 	 * Метод нахождения модуля числа 
-	 * @param module значение переменной
+	 * @return возврат результата
 	 */
 	public static double createModule(double module) {
 		if (module >= 0) {
@@ -136,8 +140,8 @@ public class Arithmetic {
 	
 	/**
 	 * Метод нахождения рандомного значения из диапазона 
-	 * @param randomMin минимальное значение диапазона
-	 * @param randomMax максимальное значение диапазона
+	 * @value randomMin,randomMax
+	 * @return возврат результата
 	 */
 	
 	public static int createRandom(int randomMin, int randomMax) {

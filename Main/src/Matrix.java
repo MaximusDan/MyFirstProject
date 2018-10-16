@@ -7,9 +7,10 @@ public class Matrix {
 		int average = 0;
 		while (true) {
 			System.out.println("Нажмите 0 если нечего не хотите делать");
-			System.out.println("Нажмите 1 для создания и заполнения массива");
-			System.out.println("Нажмите 2 для подсчета среднего арифметического элементов массива");
-			System.out.println("Нажмите 3 для вывода массива");
+			System.out.println("Нажмите 1 для вывода массива");
+			System.out.println("Нажмите 2 для создания и заполнения массива");
+			System.out.println("Нажмите 3 для подсчета среднего арифметического элементов массива");
+			System.out.println("Нажмите 4 для нахождения числа введенного с консоли в массиве");
 			
 			boolean stopMethodMatrix = false;
 			switch (Console.readFromConsoleIntValue()) {
@@ -18,14 +19,20 @@ public class Matrix {
 				System.out.println("Программа завершена");
 				break;
 			case 1:
-				massiv = Matrix.createMass();
+				Matrix.showMass(massiv);
 				break;
 			case 2:
+				massiv = Matrix.createMass();
+				break;
+			case 3:
 				average = Matrix.averageArithmetic(massiv);
 				System.out.println(average);
 				break;
-			case 3:
-				Matrix.showMass(massiv);
+			case 4:
+				System.out.println("Введите число с которым Вы хотите сравнить");
+				int value = Console.readFromConsoleIntValue();
+				boolean bol = Matrix.comparisonWithValue1(massiv, value);
+				System.out.println(bol);
 				break;
 			}
 				if (stopMethodMatrix) {
@@ -63,6 +70,19 @@ public class Matrix {
 		}
 		return value / value1;
 	}
+	/** Метод выяснения есть ли в массиве число которое введи с консоли. 
+	 * @return - возвращает true или false
+	 * */
+	public static boolean comparisonWithValue1(int[] mass, int value1) {
+		boolean bol1 = false;
+		for (int i = 0; i < mass.length; i++) {
+			if (mass[i] == value1) {
+				bol1 = true;
+				break;
+			}
+		}
+		return bol1;
+	} 
 
 	/** Метод вывода массива */
 	public static void showMass(int[] a) {

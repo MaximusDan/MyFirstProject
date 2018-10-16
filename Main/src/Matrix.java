@@ -11,6 +11,7 @@ public class Matrix {
 			System.out.println("Нажмите 2 для создания и заполнения массива");
 			System.out.println("Нажмите 3 для подсчета среднего арифметического элементов массива");
 			System.out.println("Нажмите 4 для нахождения числа введенного с консоли в массиве");
+			System.out.println("Нажмите 5 что бы узнать сколько раз встречается число в массиве введенное с консоли");
 			
 			boolean stopMethodMatrix = false;
 			switch (Console.readFromConsoleIntValue()) {
@@ -33,6 +34,12 @@ public class Matrix {
 				int value = Console.readFromConsoleIntValue();
 				boolean bol = Matrix.comparisonWithValue1(massiv, value);
 				System.out.println(bol);
+				break;
+			case 5:
+				System.out.println("Введите число с которым Вы хотите сравнить");
+				int point = Console.readFromConsoleIntValue();
+				int point2 = Matrix.comparisonWithValue2(massiv, point);
+				System.out.println(point2);
 				break;
 			}
 				if (stopMethodMatrix) {
@@ -82,6 +89,19 @@ public class Matrix {
 			}
 		}
 		return bol1;
+	} 
+	
+	/** Метод, что бы узнать сколько раз встречается число в массиве введенное с консоли 
+	 * @return - возвращает значение
+	 * */
+	public static int comparisonWithValue2(int[] mass, int point1) {
+		int a=0; //счетчик
+		for (int i = 0; i < mass.length; i++) {
+			if (mass[i] == point1) {
+				a++;
+			}
+		}
+		return a;
 	} 
 
 	/** Метод вывода массива */

@@ -1,10 +1,13 @@
 /**
  * @author Максим Данилович
  * 
- * Класс матриц. Содержит методы с матрицами и массивами. 
+ * Отвечает за работу с матрицами
  */
 public class Matrix {
-	/** Главное меню класса Matrix */
+	
+	/** 
+	* Главное меню класса Matrix 
+	*/
 	public static void menuMatrix() {
 		int[] massiv = null;
 		int average = 0;
@@ -50,9 +53,10 @@ public class Matrix {
 			}
 		}
 	}
+	
 	/**
-	 * Метод создания и заполнения массива
-	 * @value length количество элементов в массиве(длина массива)
+	 * Создаёт и заполняет массив
+	 *
 	 * @return возвращает массив
 	 */
 	public static int[] createMass() {
@@ -69,10 +73,12 @@ public class Matrix {
 		return mass;
 	}
 	
-	/** Метод нахождения среднего арифметического элементов массива 
-	 * @return - возвращает среднее арифметическое
-	 * */
-	
+	/** 
+	 * Находит среднее арифметическое элементов массива
+	 *
+	 * @param average массив в котором будет вычисляться среднее арифметическое
+	 * @return возвращает среднее арифметическое 
+	 */
 	public static int averageArithmetic(int[] average) {
 		int value = 0;
 		for (int i = 0; i < average.length; i++) {
@@ -80,9 +86,14 @@ public class Matrix {
 		}
 		return value / average.length;
 	}
-	/** Метод выяснения есть ли в массиве число которое введи с консоли. 
+	
+	/**
+	 * Проверяет есть ли в массив значение, которое мы передали в метод
+	 * 
+	 * @param mass массив, в котором будет выполняться поиск числа
+	 * @param value1 число, которое будет искаться в массиве
 	 * @return - возвращает true или false
-	 * */
+	 */
 	public static boolean comparisonWithValue1(int[] mass, int value1) {
 		boolean bol1 = false;
 		for (int i = 0; i < mass.length; i++) {
@@ -94,9 +105,13 @@ public class Matrix {
 		return bol1;
 	} 
 	
-	/** Метод, что бы узнать сколько раз встречается число в массиве введенное с консоли 
-	 * @return - возвращает значение
-	 * */
+	/** 
+	 * Подсчитывает сколько раз число встречается в массиве
+	 *
+	 * @param mass массив, в котором будет выполняться поиск числа
+	 * @param point1 число, которое будет искаться в массиве
+	 * @return - результат подсчёта(количество)
+	 */
 	public static int comparisonWithValue2(int[] mass, int point1) {
 		int a=0; //счетчик
 		for (int i = 0; i < mass.length; i++) {
@@ -107,7 +122,11 @@ public class Matrix {
 		return a;
 	} 
 
-	/** Метод вывода массива */
+	/** 
+	* Выводит массив на консоль
+	*
+	* @param a массив, который будет выведен на консоль
+	*/
 	public static void showMass(int[] a) {
 		for (int i = 0; i < a.length; i++) {
 			System.out.println(a[i]);

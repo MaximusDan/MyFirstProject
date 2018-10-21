@@ -5,7 +5,7 @@
  * Главный класс. Сожержит главное меню программы 
  * */
 public class Main {
-//sdfgkl
+//sdfgklwetuiopiiuytrewertyuiophgfdsasdfg
 	/** Главное меню программы */
 	public static void main(String[] args) {
 

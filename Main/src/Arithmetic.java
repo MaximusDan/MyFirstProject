@@ -1,6 +1,6 @@
 /**
  * @author Максим Данилович
- * 
+ *
  * Класс арифметики. Содержит методы с арифметическими операциями 
  */
 public class Arithmetic {
@@ -17,61 +17,68 @@ public class Arithmetic {
 			System.out.println("4 - Вычитание");
 			System.out.println("5 - Найти делители числа");
 			System.out.println("6 - Найти модуль числа");
+			System.out.println("7 - Возвести число в степень");
 
 			boolean stopMethodArithmetic = false;
 			switch (Console.readFromConsoleIntValue()) {
-			case 0:
-				stopMethodArithmetic = true;
-				System.out.println("Задача завершена");
-				break;
-			case 1:
-				System.out.println("Введите первое число");
-				value = Console.readFromConsoleIntValue();
-				System.out.println("Введите второе число");
-				value1 = Console.readFromConsoleIntValue();
-				Arithmetic.add(value, value1);
-				break;
-			case 2:
-				System.out.println("Введите первое число");
-				value = Console.readFromConsoleIntValue();
-				System.out.println("Введите второе число");
-				value1 = Console.readFromConsoleIntValue();
-				Arithmetic.multiply(value, value1);
-				break;
-			case 3:
-				System.out.println("Введите первое число");
-				value = Console.readFromConsoleIntValue();
-				System.out.println("Введите второе число");
-				while (true) {
+				case 0:
+					stopMethodArithmetic = true;
+					System.out.println("Задача завершена");
+					break;
+				case 1:
+					System.out.println("Введите первое число");
+					value = Console.readFromConsoleIntValue();
+					System.out.println("Введите второе число");
 					value1 = Console.readFromConsoleIntValue();
-					if (value1 != 0) {
-						break;
-					} else {
-						System.out.println("2 число не должно ровняться 0");
+					Arithmetic.add(value, value1);
+					break;
+				case 2:
+					System.out.println("Введите первое число");
+					value = Console.readFromConsoleIntValue();
+					System.out.println("Введите второе число");
+					value1 = Console.readFromConsoleIntValue();
+					Arithmetic.multiply(value, value1);
+					break;
+				case 3:
+					System.out.println("Введите первое число");
+					value = Console.readFromConsoleIntValue();
+					System.out.println("Введите второе число");
+					while (true) {
+						value1 = Console.readFromConsoleIntValue();
+						if (value1 != 0) {
+							break;
+						} else {
+							System.out.println("2 число не должно ровняться 0");
+						}
 					}
-				}
-				Arithmetic.divis(value, value1);
-				break;
-			case 4:
-				System.out.println("Введите первое число");
-				value = Console.readFromConsoleIntValue();
-				System.out.println("Введите второе число");
-				value1 = Console.readFromConsoleIntValue();
-				Arithmetic.subtract(value, value1);
-				break;
-			case 5:
-				System.out.println("Введите число делители которого Вы желаете найти");
-				value2 = Console.readFromConsoleIntValue();
-				Arithmetic.createDivider(value2);
-				break;
-			case 6:
-				System.out.println("Введите число модуль которого Вы желаете найти");
-				double value4 = Console.readFromConsoleDoubleValue();
-				double showModule = Arithmetic.createModule(value4);
-				System.out.println(showModule);
-				break;
-			default:
-				System.out.println("Введенное число не попадает в диапазон чисел предложенных вам ранее");
+					Arithmetic.divis(value, value1);
+					break;
+				case 4:
+					System.out.println("Введите первое число");
+					value = Console.readFromConsoleIntValue();
+					System.out.println("Введите второе число");
+					value1 = Console.readFromConsoleIntValue();
+					Arithmetic.subtract(value, value1);
+					break;
+				case 5:
+					System.out.println("Введите число делители которого Вы желаете найти");
+					value2 = Console.readFromConsoleIntValue();
+					Arithmetic.createDivider(value2);
+					break;
+				case 6:
+					System.out.println("Введите число модуль которого Вы желаете найти");
+					double value4 = Console.readFromConsoleDoubleValue();
+					double showModule = Arithmetic.createModuleDouble(value4);
+					System.out.println(showModule);
+					break;
+				case 7:
+					System.out.println("Введите число, которое Вы желаете возвести в степень");
+					double number = Console.readFromConsoleDoubleValue();
+					number = Arithmetic.number25(number);
+					System.out.println(number);
+					break;
+				default:
+					System.out.println("Введенное число не попадает в диапазон чисел предложенных вам ранее"); //проверка на ввод только номеров case
 			}
 			if (stopMethodArithmetic) {
 				break;
@@ -80,7 +87,7 @@ public class Arithmetic {
 	}
 
 	/**
-	 * Метод нахождения суммы переменных 
+	 * Метод нахождения суммы переменных
 	 * @value variableA,variableB
 	 */
 	public static void add(int variableA, int variableB) {
@@ -89,14 +96,14 @@ public class Arithmetic {
 
 	/**
 	 * Метод умножения переменных
-	 * @value variableA,variableB 
+	 * @value variableA,variableB
 	 */
 	public static void multiply(int variableA, int variableB) {
 		System.out.println("умножение = " + (variableA * variableB));
 	}
 
 	/**
-	 * Метод деления переменных 
+	 * Метод деления переменных
 	 * @value variableA,variableB
 	 */
 	public static void divis(int variableA, int variableB) {
@@ -105,7 +112,7 @@ public class Arithmetic {
 
 	/**
 	 * Метод вычитания переменных
-	 * @value variableA,variableB 
+	 * @value variableA,variableB
 	 */
 	public static void subtract(int variableA, int variableB) {
 		System.out.println("вычитание = " + (variableA - variableB));
@@ -124,10 +131,10 @@ public class Arithmetic {
 	}
 
 	/**
-	 * Метод нахождения модуля числа 
+	 * Метод нахождения модуля числа типа double
 	 * @return возврат результата
 	 */
-	public static double createModule(double module) {
+	public static double createModuleDouble(double module) {
 		if (module >= 0) {
 			module = module;
 		}
@@ -136,16 +143,41 @@ public class Arithmetic {
 		}
 		return module;
 	}
-	
-	
 	/**
-	 * Метод нахождения рандомного значения из диапазона 
+	 * Метод нахождения модуля числа типа Int
+	 * @return возврат результата
+	 */
+	public static int createModuleInt(int module) {
+		if (module >= 0) {
+			module = module;
+		}
+		if (module < 0) {
+			module = (module * (-1));
+		}
+		return module;
+	}
+
+
+	/**
+	 * Метод нахождения рандомного значения из диапазона
 	 * @value randomMin,randomMax
 	 * @return возврат результата
 	 */
-	
+
 	public static int createRandom(int randomMin, int randomMax) {
 		int a = (int) (Math.random() * (randomMax - randomMin + 1)) + randomMin;
 		return a;
+	}
+
+	/**
+	 * Метод возведения числа в степень
+	 * @value value число
+	 * @value value1 степень
+	 * @return возврат результата
+	 */
+	public static double number25(double value) {
+		System.out.println("Введите в какую степень Вы хотите возвести число");
+		int value1 = Console.readFromConsoleIntValue();
+		return Math.pow(value, value1);
 	}
 }

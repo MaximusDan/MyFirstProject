@@ -165,7 +165,11 @@ public class Arithmetic {
 	 */
 	public static double number25(double value) {
 		System.out.println("Введите в какую степень Вы хотите возвести число");
-		int value1 = Console.readFromConsoleIntValue();
-		return Math.pow(value, value1);
+		double value1= value;
+		int value2 = Console.readFromConsoleIntValue();
+		for(int i=1;i<value2;i++){
+			value = value*value1;
+		}
+		return value;
 	}
 }

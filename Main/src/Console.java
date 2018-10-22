@@ -8,7 +8,6 @@ public class Console {
 
 	/**
 	 * Метод консольного ввода
-	 * @return - возвращает значение Int считываемое с консоли
 	 */
 	public static int readFromConsoleIntValue() {
 		while (true) {
@@ -23,7 +22,6 @@ public class Console {
 
 	/**
 	 * Метод консольного ввода
-	 * @return - возвращает значение Double считываемое с консоли
 	 */
 	public static double readFromConsoleDoubleValue() {
 		while (true) {

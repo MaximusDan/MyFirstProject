@@ -99,8 +99,6 @@ public class Matrix {
 	}
 	/**
 	 * Метод создания и заполнения массива
-	 * @value length количество элементов в массиве(длина массива)
-	 * @return возвращает массив
 	 */
 	public static int[] createMass() {
 		System.out.println("Введите длину массива");
@@ -117,7 +115,6 @@ public class Matrix {
 	}
 
 	/** Метод нахождения среднего арифметического элементов массива
-	 * @return - возвращает среднее арифметическое
 	 * */
 
 	public static int averageArithmetic(int[] average) {
@@ -128,7 +125,6 @@ public class Matrix {
 		return value / average.length;
 	}
 	/** Метод выяснения есть ли в массиве число которое введи с консоли.
-	 * @return - возвращает true или false
 	 * */
 	public static boolean comparisonWithValue1(int[] mass, int value1) {
 		boolean bol1 = false;
@@ -142,8 +138,7 @@ public class Matrix {
 	}
 
 	/** Метод, что бы узнать сколько раз встречается число в массиве введенное с консоли
-	 * @return - возвращает значение
-	 * */
+	 */
 	public static int comparisonWithValue2(int[] mass, int point1) {
 		int a=0; //счетчик
 		for (int i = 0; i < mass.length; i++) {
@@ -162,8 +157,6 @@ public class Matrix {
 	}
 	/**
 	 * Метод создания и заполнения двумерного массива
-	 * @value massLength1 количество строк; massLength2 количество столбцов
-	 * @return возвращает массив
 	 */
 	public static int[][] createDuoMass() {
 		System.out.println("Введите колличество строк");
@@ -193,7 +186,6 @@ public class Matrix {
 		}
 	}
 	/** Метод нахождения среднего арифметического элементов двумерного массива
-	 * @return - возвращает среднее арифметическое
 	 * */
 	public static int averageArithmeticDuo(int[][] average) {
 		int value = 0;
@@ -207,7 +199,6 @@ public class Matrix {
 		return value / value1;
 	}
 	/** Метод выяснения есть ли в массиве число которое введи с консоли.
-	 * @return - возвращает true или false
 	 * */
 	public static boolean comparisonWithValue1Duo(int[][] mass, int value1) {
 		boolean bol1 = false;
@@ -223,7 +214,6 @@ public class Matrix {
 	}
 
 	/** Метод, что бы узнать сколько раз встречается число в массиве введенное с консоли
-	 * @return - возвращает значение
 	 * */
 	public static int comparisonWithValue2Duo(int[][] mass, int point1) {
 		int a = 0; // счетчик
@@ -237,9 +227,7 @@ public class Matrix {
 		return a;
 	}
 	/** Метод нахождения значений (по модулю) одномерного массива
-	 * @value value число, которе передаем в метод что бы найти его модуль
-	 * @return - возвращает массив по модулю
-	 * */
+	 */
 	public static int[] number26(int[] mass) {
 		for (int i = 0; i < mass.length; i++) {
 			int value = Arithmetic.createModuleInt(mass[i]);
@@ -248,9 +236,7 @@ public class Matrix {
 		return mass;
 	}
 	/** Метод нахождения значений (по модулю) двумерного массива
-	 * @value value число, которе передаем в метод что бы найти его модул
-	 * @return - возвращает массив по модулю
-	 * */
+	 */
 	public static int[][] number26Duo(int[][] mass) {
 		for(int i=0; i < mass.length; i++) {
 			for(int j=0; j < mass[i].length; j++) {
@@ -261,7 +247,7 @@ public class Matrix {
 		return mass;
 	}
 	/** Метод нахождения строки сумма элементов которой больше чем у других
-	 * */
+	 */
 	public static void number27Element(int[][] mass) {
 		int value = 0; // счетчик элементов строки массива
 		int value1 = 0, k = 0;

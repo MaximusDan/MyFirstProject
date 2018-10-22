@@ -88,7 +88,6 @@ public class Arithmetic {
 
 	/**
 	 * Метод нахождения суммы переменных
-	 * @value variableA,variableB
 	 */
 	public static void add(int variableA, int variableB) {
 		System.out.println("сложение = " + (variableA + variableB));
@@ -96,7 +95,6 @@ public class Arithmetic {
 
 	/**
 	 * Метод умножения переменных
-	 * @value variableA,variableB
 	 */
 	public static void multiply(int variableA, int variableB) {
 		System.out.println("умножение = " + (variableA * variableB));
@@ -104,7 +102,6 @@ public class Arithmetic {
 
 	/**
 	 * Метод деления переменных
-	 * @value variableA,variableB
 	 */
 	public static void divis(int variableA, int variableB) {
 		System.out.println("деление = " + (variableA / variableB));
@@ -112,7 +109,6 @@ public class Arithmetic {
 
 	/**
 	 * Метод вычитания переменных
-	 * @value variableA,variableB
 	 */
 	public static void subtract(int variableA, int variableB) {
 		System.out.println("вычитание = " + (variableA - variableB));
@@ -120,7 +116,6 @@ public class Arithmetic {
 
 	/**
 	 * Метод нахождения делителей числа
-	 * @value variableA
 	 */
 	public static void createDivider(int variable) {
 		for (int divider = 1; divider <= variable; divider++) {
@@ -132,7 +127,6 @@ public class Arithmetic {
 
 	/**
 	 * Метод нахождения модуля числа типа double
-	 * @return возврат результата
 	 */
 	public static double createModuleDouble(double module) {
 		if (module >= 0) {
@@ -145,7 +139,6 @@ public class Arithmetic {
 	}
 	/**
 	 * Метод нахождения модуля числа типа Int
-	 * @return возврат результата
 	 */
 	public static int createModuleInt(int module) {
 		if (module >= 0) {
@@ -160,8 +153,6 @@ public class Arithmetic {
 
 	/**
 	 * Метод нахождения рандомного значения из диапазона
-	 * @value randomMin,randomMax
-	 * @return возврат результата
 	 */
 
 	public static int createRandom(int randomMin, int randomMax) {
@@ -171,9 +162,6 @@ public class Arithmetic {
 
 	/**
 	 * Метод возведения числа в степень
-	 * @value value число
-	 * @value value1 степень
-	 * @return возврат результата
 	 */
 	public static double number25(double value) {
 		System.out.println("Введите в какую степень Вы хотите возвести число");

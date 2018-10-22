@@ -1,8 +1,3 @@
-/**
- * @author Максим Данилович
- *
- * Класс матриц. Содержит методы с матрицами и массивами.
- */
 public class Matrix {
 	/** Главное меню класса Matrix */
 	public static void menuMatrix() {

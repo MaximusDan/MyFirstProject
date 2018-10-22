@@ -1,9 +1,5 @@
 import java.util.Scanner;
-/**
- * @author Максим Данилович
- *
- *Класс консольного ввода. Содержит методы считываия с консоли. 
- */
+
 public class Console {
 
 	/**

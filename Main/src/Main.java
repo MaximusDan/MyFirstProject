@@ -8,6 +8,7 @@ public class Main {
 			System.out.println("Нажмите 0 если нечего не хотите делать");
 			System.out.println("Нажмите 1 для выполнения арифметических действий");
 			System.out.println("Нажмите 2 для выполнения действий с массивами или матрицей");
+			System.out.println("Нажмите 3 для выполнения действий с двумерными массивами или матрицей");
 			switch (Console.readFromConsoleIntValue()) {
 			case 0:
 				stopProject = true;
@@ -18,6 +19,9 @@ public class Main {
 				break;
 			case 2:
 				Matrix.menuMatrix();
+				break;
+			case 3:
+				DuoClass.menuDuoClass();
 				break;
 			default:
 				System.out.println("Введенное число неправильное");

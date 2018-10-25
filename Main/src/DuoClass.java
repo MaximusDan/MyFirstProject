@@ -137,9 +137,9 @@ public class DuoClass {
         return massDuo;
     }
     public static void elementMassDuo(int[][] mass) {
-        int value = 0; // счетчик суммы элементов строки массива
         int value1 = 0, k = 0;
         for (int i = 0; i < mass.length; i++) {
+            int value = 0; // счетчик суммы элементов строки массива
             for (int j = 0; j < mass[i].length; j++) {
                 value = value + mass[i][j];
             }
@@ -147,7 +147,6 @@ public class DuoClass {
                 value1 = value;
                 k = i;
             }
-            value = 0;
         }
         System.out.println("В строке" + " " + (k) + " " + "сумма элементов массива больше чем в дргих");
     }

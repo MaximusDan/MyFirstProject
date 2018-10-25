@@ -25,14 +25,16 @@ public class Arithmetic {
 					value = Console.readFromConsoleIntValue();
 					System.out.println("Введите второе число");
 					value1 = Console.readFromConsoleIntValue();
-					Arithmetic.add(value, value1);
+					int summ = Arithmetic.summ(value, value1);
+					System.out.println("сумма = " + summ);
 					break;
 				case 2:
 					System.out.println("Введите первое число");
 					value = Console.readFromConsoleIntValue();
 					System.out.println("Введите второе число");
 					value1 = Console.readFromConsoleIntValue();
-					Arithmetic.multiply(value, value1);
+					int multiply = Arithmetic.multiply(value, value1);
+					System.out.println("умножение = " + multiply);
 					break;
 				case 3:
 					System.out.println("Введите первое число");
@@ -46,14 +48,16 @@ public class Arithmetic {
 							System.out.println("2 число не должно ровняться 0");
 						}
 					}
-					Arithmetic.divis(value, value1);
+					int divis = Arithmetic.divis(value, value1);
+					System.out.println("деление = " + divis);
 					break;
 				case 4:
 					System.out.println("Введите первое число");
 					value = Console.readFromConsoleIntValue();
 					System.out.println("Введите второе число");
 					value1 = Console.readFromConsoleIntValue();
-					Arithmetic.subtract(value, value1);
+					int subtract = Arithmetic.subtract(value, value1);
+					System.out.println("вычитание = " + subtract);
 					break;
 				case 5:
 					System.out.println("Введите число делители которого Вы желаете найти");
@@ -84,29 +88,33 @@ public class Arithmetic {
 	/**
 	 * Метод нахождения суммы переменных
 	 */
-	public static void add(int variableA, int variableB) {
-		System.out.println("сложение = " + (variableA + variableB));
+	public static int summ(int variableA, int variableB) {
+		int summ = variableA + variableB;
+		return summ;
 	}
 
 	/**
 	 * Метод умножения переменных
 	 */
-	public static void multiply(int variableA, int variableB) {
-		System.out.println("умножение = " + (variableA * variableB));
+	public static int multiply(int variableA, int variableB) {
+		int multiply = variableA * variableB;
+		return multiply;
 	}
 
 	/**
 	 * Метод деления переменных
 	 */
-	public static void divis(int variableA, int variableB) {
-		System.out.println("деление = " + (variableA / variableB));
+	public static int divis(int variableA, int variableB) {
+		int divis = variableA / variableB;
+		return divis;
 	}
 
 	/**
 	 * Метод вычитания переменных
 	 */
-	public static void subtract(int variableA, int variableB) {
-		System.out.println("вычитание = " + (variableA - variableB));
+	public static int subtract(int variableA, int variableB) {
+		int subtract = variableA - variableB;
+		return subtract;
 	}
 
 	/**

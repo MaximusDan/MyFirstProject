@@ -29,5 +29,18 @@ public class Console {
 			}
 		}
 	}
+	/**
+	 * Метод консольного ввода String
+	 */
+	public static String readFromConsoleStringValue() {
+		while (true) {
+			Scanner sc = new Scanner(System.in);
+			if (sc.hasNext()) {
+				return sc.nextLine();
+			} else {
+				System.out.println("Введенные символы не являются числом");
+			}
+		}
+	}
 }
 

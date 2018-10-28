@@ -175,4 +175,16 @@ public class Arithmetic {
 		}
 		return value;
 	}
+	/**
+	 * Метод возведения Int числа в степень
+	 */
+	public static int degree(int value) {
+		System.out.println("Введите в какую степень Вы хотите возвести число");
+		int value1= value;
+		int value2 = Console.readFromConsoleIntValue();
+		for(int i=1;i<value2;i++){
+			value = value*value1;
+		}
+		return value;
+	}
 }

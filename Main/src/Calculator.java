@@ -1,9 +1,10 @@
 public class Calculator {
-    static int a = 0, b = 0, c = 0;
-    public static void menuCalculator(){
+    static int number1 = 0, number2 = 0, number3 = 0;
+
+    public static void menuCalculator() {
         String n;
         System.out.println("Вас приветствует калькулятор Максим");
-        Calculator.rrrrrr();
+        Calculator.pushTheNumber();
         boolean stopMenuCalculator = false;
         while (true) {
 
@@ -14,78 +15,126 @@ public class Calculator {
                     break;
 
                 case "+":
-                    b = Console.readFromConsoleIntValue();
+                    number2 = Console.readFromConsoleIntValue();
                     System.out.println("=");
-                    c = Arithmetic.summ(a,b);
-                    System.out.println(c);
-                    System.out.println("Желаете продолжить?");
-                    System.out.println("1=Да");
-                    System.out.println("2=Нет");
+                    number3 = Arithmetic.summ(number1, number2);
+                    Calculator.show(number3);
+                    Calculator.request();
                     switch (Console.readFromConsoleIntValue()) {
                         case 1:
-                            a = c;
-                            System.out.println(a);
+                            number1 = number3;
+                            Calculator.show(number1);
                             break;
                         case 2:
-                            a = 0;
-                            Calculator.rrrrrr();
+                            number1 = 0;
+                            Calculator.pushTheNumber();
+                            break;
+                        case 3:
+                            stopMenuCalculator = true;
+                            System.out.println("Программа завершена");
                             break;
                     }
                     break;
                 case "-":
-                    b = Console.readFromConsoleIntValue();
+                    number2 = Console.readFromConsoleIntValue();
                     System.out.println("=");
-                    c = Arithmetic.subtract(a,b);
-                    System.out.println(c);
-                    System.out.println("Желаете продолжить?");
-                    System.out.println("1=Да");
-                    System.out.println("2=Нет");
+                    number3 = Arithmetic.subtract(number1, number2);
+                    Calculator.show(number3);
+                    Calculator.request();
                     switch (Console.readFromConsoleIntValue()) {
                         case 1:
-                            a = c;
-                            System.out.println(a);
+                            number1 = number3;
+                            Calculator.show(number1);
                             break;
                         case 2:
-                            a = 0;
-                            Calculator.rrrrrr();
+                            number1 = 0;
+                            Calculator.pushTheNumber();
+                            break;
+                        case 3:
+                            stopMenuCalculator = true;
+                            System.out.println("Программа завершена");
                             break;
                     }
                     break;
                 case "*":
-                    b = Console.readFromConsoleIntValue();
+                    number2 = Console.readFromConsoleIntValue();
                     System.out.println("=");
-                    c = Arithmetic.multiply(a,b);
-                    System.out.println(c);
-                    System.out.println("Желаете продолжить?");
-                    System.out.println("1=Да");
-                    System.out.println("2=Нет");
+                    number3 = Arithmetic.multiply(number1, number2);
+                    Calculator.show(number3);
+                    Calculator.request();
                     switch (Console.readFromConsoleIntValue()) {
                         case 1:
-                            a = c;
-                            System.out.println(a);
+                            number1 = number3;
+                            Calculator.show(number1);
                             break;
                         case 2:
-                            a = 0;
-                            Calculator.rrrrrr();
+                            number1 = 0;
+                            Calculator.pushTheNumber();
+                            break;
+                        case 3:
+                            stopMenuCalculator = true;
+                            System.out.println("Программа завершена");
                             break;
                     }
                     break;
                 case "/":
-                    b = Console.readFromConsoleIntValue();
+                    number2 = Console.readFromConsoleIntValue();
                     System.out.println("=");
-                    c = Arithmetic.divis(a,b);
-                    System.out.println(c);
-                    System.out.println("Желаете продолжить?");
-                    System.out.println("1=Да");
-                    System.out.println("2=Нет");
+                    number3 = Arithmetic.divis(number1, number2);
+                    Calculator.show(number3);
+                    Calculator.request();
                     switch (Console.readFromConsoleIntValue()) {
                         case 1:
-                            a = c;
-                            System.out.println(a);
+                            number1 = number3;
+                            Calculator.show(number1);
                             break;
                         case 2:
-                            a = 0;
-                            Calculator.rrrrrr();
+                            number1 = 0;
+                            Calculator.pushTheNumber();
+                            break;
+                        case 3:
+                            stopMenuCalculator = true;
+                            System.out.println("Программа завершена");
+                            break;
+                    }
+                    break;
+                case "mod":
+                    System.out.println("=");
+                    number3 = Arithmetic.createModuleInt(number1);
+                    Calculator.show(number3);
+                    Calculator.request();
+                    switch (Console.readFromConsoleIntValue()) {
+                        case 1:
+                            number1 = number3;
+                            Calculator.show(number1);
+                            break;
+                        case 2:
+                            number1 = 0;
+                            Calculator.pushTheNumber();
+                            break;
+                        case 3:
+                            stopMenuCalculator = true;
+                            System.out.println("Программа завершена");
+                            break;
+                    }
+                    break;
+                case "st":
+                    number3 = Arithmetic.degree(number1);
+                    System.out.println("=");
+                    Calculator.show(number3);
+                    Calculator.request();
+                    switch (Console.readFromConsoleIntValue()) {
+                        case 1:
+                            number1 = number3;
+                            Calculator.show(number1);
+                            break;
+                        case 2:
+                            number1 = 0;
+                            Calculator.pushTheNumber();
+                            break;
+                        case 3:
+                            stopMenuCalculator = true;
+                            System.out.println("Программа завершена");
                             break;
                     }
                     break;
@@ -95,9 +144,19 @@ public class Calculator {
             }
         }
     }
-public static void rrrrrr(){
-    System.out.println("Введите целое число");
-    a = Console.readFromConsoleIntValue();
-}
 
+    public static void pushTheNumber() {
+        System.out.println("Введите целое число");
+        number1 = Console.readFromConsoleIntValue();
+    }
+
+    public static void request() {
+        System.out.println("1= Желаете продолжить");
+        System.out.println("2= Желаете продолжить с обнулением результата");
+        System.out.println("3= Выход из калькулятора");
+    }
+
+    public static void show(int number) {
+        System.out.println(number);
+    }
 }

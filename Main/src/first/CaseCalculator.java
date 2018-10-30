@@ -1,3 +1,5 @@
+package first;
+
 public class CaseCalculator {
     /**
      * Метод суммы переменных

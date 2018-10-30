@@ -1,3 +1,6 @@
+import first.Arithmetic;
+import first.Console;
+
 public class Matrix {
 	/** Главное меню класса Matrix */
 	public static void menuMatrix() {

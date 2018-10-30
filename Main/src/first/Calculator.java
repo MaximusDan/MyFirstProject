@@ -1,3 +1,5 @@
+package first;
+
 public class Calculator {
     public static int number1 = 0, number2 = 0, number3 = 0;
     public static boolean stopMenuCalculator = false;

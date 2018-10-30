@@ -1,3 +1,5 @@
+package first;
+
 public class DuoClass {
     public static void menuDuoClass(){
         System.out.println("Введите действия которые Вы хотите совершить");

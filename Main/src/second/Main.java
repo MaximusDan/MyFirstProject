@@ -3,17 +3,31 @@ package second;
 public class Main {
     public static void main(String[] args) {
 
-        Student Max = new Student();
-        Student Yura = new Student();
-        Student Vlad = new Student();
+        Student max = new Student();
+        max.name = "Максим";
+        max.surname = "Данилович";
+        max.age = 27;
+        max.course = 5;
 
-        Max.createStudent();
-        Yura.createStudent();
-        Vlad.createStudent();
+        Student yura = new Student();
+        yura.name = "Юра";
+        yura.surname = "Данилович";
+        yura.age = 25;
+        yura.course = 4;
 
-        Max.show();
-        Yura.show();
-        Vlad.show();
+        Student vlad = new Student();
+        vlad.name = "Влад";
+        vlad.surname = "Юдин";
+        vlad.age = 24;
+        vlad.course = 3;
+
+        max.createStudent();
+        yura.createStudent();
+        vlad.createStudent();
+
+        max.show();
+        yura.show();
+        vlad.show();
 
     }
 }

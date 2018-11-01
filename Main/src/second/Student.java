@@ -6,7 +6,7 @@ public class Student {
     public int age;
     public int course;
 
-        public void createStudent(){
+    public void createStudent() {
         System.out.println("Введите Имя");
         String a = first.Console.readFromConsoleStringValue();
         name = a;
@@ -21,15 +21,15 @@ public class Student {
 
         System.out.println("Введите курс");
         int d = first.Console.readFromConsoleIntValue();
-        course= d;
-        }
+        course = d;
+    }
 
-        public void show(){
-            System.out.println("Имя = " + name);
-            System.out.println("Фомилия = " + surname);
-            System.out.println("Возраст = " + age);
-            System.out.println("Курс = " + course);
-            System.out.println();
+    public void show() {
+        System.out.println("Имя = " + name);
+        System.out.println("Фомилия = " + surname);
+        System.out.println("Возраст = " + age);
+        System.out.println("Курс = " + course);
+        System.out.println();
 
     }
 }

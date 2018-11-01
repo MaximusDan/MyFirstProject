@@ -6,22 +6,23 @@ public class Student {
     public int age;
     public int course;
 
-    public void createStudent() {
+    public void createStudent(String a, String b, int c, int d) {
         System.out.println("Введите Имя");
-        String a = first.Console.readFromConsoleStringValue();
+        a = first.Console.readFromConsoleStringValue();
         name = a;
 
         System.out.println("Введите Фамилию");
-        String b = first.Console.readFromConsoleStringValue();
+        b = first.Console.readFromConsoleStringValue();
         surname = b;
 
         System.out.println("Введите возраст");
-        int c = first.Console.readFromConsoleIntValue();
+        c = first.Console.readFromConsoleIntValue();
         age = c;
 
         System.out.println("Введите курс");
-        int d = first.Console.readFromConsoleIntValue();
+        d = first.Console.readFromConsoleIntValue();
         course = d;
+
     }
 
     public void show() {

@@ -21,9 +21,10 @@ public class Main {
         vlad.age = 24;
         vlad.course = 3;
 
-        max.createStudent();
-        yura.createStudent();
-        vlad.createStudent();
+        max = Student.createStudent(max.name,max.surname,max.age,max.course);
+        //max.createStudent();
+        //yura.createStudent();
+        //vlad.createStudent();
 
         max.show();
         yura.show();

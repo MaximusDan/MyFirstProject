@@ -3,35 +3,30 @@ package second;
 public class Main {
     public static void main(String[] args) {
 
-        Student max = new Student();
-        max.name = "Максим";
-        max.surname = "Данилович";
-        max.age = 27;
-        max.course = 5;
+        Student student1 = new Student();
+        student1.name = "Максим";
+        student1.surname = "Данилович";
+        student1.age = 27;
+        student1.course = 5;
 
-        Student yura = new Student();
-        yura.name = "Юра";
-        yura.surname = "Данилович";
-        yura.age = 25;
-        yura.course = 4;
+        Student student2 = new Student();
+        student2.name = "Юра";
+        student2.surname = "Данилович";
+        student2.age = 25;
+        student2.course = 4;
 
-        Student vlad = new Student();
-        vlad.name = "Влад";
-        vlad.surname = "Юдин";
-        vlad.age = 24;
-        vlad.course = 3;
+        Student student3 = new Student();
+        student3.name = "Влад";
+        student3.surname = "Юдин";
+        student3.age = 24;
+        student3.course = 3;
 
-        Student denis = new Student();
-        denis.createStudent(denis.name,denis.surname,denis.age,denis.course);
+        Student.createStudent("Вася","Вакуленко",35,1);
 
+        student1.show();
+        student2.show();
+        student3.show();
+        student4.show();
 
-        //max.createStudent();
-        //yura.createStudent();
-        //vlad.createStudent();
-
-        max.show();
-        yura.show();
-        vlad.show();
-        denis.show();
     }
 }

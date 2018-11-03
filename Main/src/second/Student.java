@@ -5,24 +5,15 @@ public class Student {
     public String surname;
     public int age;
     public int course;
+    public Student [] massStudent = new Student[4];
 
-    public void createStudent(String a, String b, int c, int d) {
-        System.out.println("Введите Имя");
-        a = first.Console.readFromConsoleStringValue();
-        name = a;
-
-        System.out.println("Введите Фамилию");
-        b = first.Console.readFromConsoleStringValue();
-        surname = b;
-
-        System.out.println("Введите возраст");
-        c = first.Console.readFromConsoleIntValue();
-        age = c;
-
-        System.out.println("Введите курс");
-        d = first.Console.readFromConsoleIntValue();
-        course = d;
-
+    public static Student createStudent(String nameCreateStudent,String surnameCreateStudent,int ageCreateStudent,int courseCreateStudent) {
+        Student student4 = new Student();
+        student4.name = nameCreateStudent;
+        student4.surname = surnameCreateStudent;
+        student4.age = ageCreateStudent;
+        student4.age = courseCreateStudent;
+        return student4;
     }
 
     public void show() {

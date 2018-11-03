@@ -21,7 +21,10 @@ public class Main {
         vlad.age = 24;
         vlad.course = 3;
 
-        max = Student.createStudent(max.name,max.surname,max.age,max.course);
+        Student denis = new Student();
+        denis.createStudent(denis.name,denis.surname,denis.age,denis.course);
+
+
         //max.createStudent();
         //yura.createStudent();
         //vlad.createStudent();
@@ -29,6 +32,6 @@ public class Main {
         max.show();
         yura.show();
         vlad.show();
-
+        denis.show();
     }
 }

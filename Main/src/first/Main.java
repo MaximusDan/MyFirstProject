@@ -21,7 +21,7 @@ public class Main {
 				Arithmetic.arithmeticMenu();
 				break;
 			case 2:
-				Matrix.menuMatrix();
+				//Matrix.menuMatrix();
 				break;
 			case 3:
 				DuoClass.menuDuoClass();

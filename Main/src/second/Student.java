@@ -5,8 +5,10 @@ public class Student {
     public String surname;
     public int age;
     public int course;
-    public Student[] massStudent = new Student[4];
 
+    /**
+     * Метод создания студента
+     */
     public  static Student createStudent(String nameCreateStudent, String surnameCreateStudent, int ageCreateStudent, int courseCreateStudent) {
         Student student4 = new Student();
         student4.name = nameCreateStudent;
@@ -24,21 +26,26 @@ public class Student {
         System.out.println();
 
     }
-
-    public void massStudent(Student a, Student b, Student c, Student d) {
+    /**
+     * Метод создания массива студентов
+     */
+    public static Student [] massStudent(Student a, Student b, Student c, Student d) {
+        Student[] massStudent = new Student[4];
         massStudent[0] = a;
         massStudent[1] = b;
         massStudent[2] = c;
         massStudent[3] = d;
         return massStudent;
     }
-
-    public void showMass(Student[] mass) {
-       for (int i = 0; i > mass.length; i++) {
-           System.out.println("Имя = " + name);
-           System.out.println("Фомилия = " + surname);
-           System.out.println("Возраст = " + age);
-           System.out.println("Курс = " + course);
+    /**
+     * Метод вывода массива студентов
+     */
+    public static void showMass(Student[] mass) {
+       for (int i = 0; i < mass.length; i++) {
+           System.out.println("Имя = " + mass[i].name);
+           System.out.println("Фомилия = " + mass[i].surname);
+           System.out.println("Возраст = " + mass[i].age);
+           System.out.println("Курс = " + mass[i].course);
            System.out.println();
        }
     }

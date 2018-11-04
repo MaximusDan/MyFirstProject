@@ -28,10 +28,8 @@ public class Main {
         student3.show();
         student4.show();
 
-        Student studentMass = new Student();
+        Student [] createMassStudent = Student.massStudent(student1,student2,student3,student4); //Создаем массив студентов
 
-        studentMass.massStudent(student1,student2,student3,student4);
-
-        studentMass.showMass(studentMass);
+        Student.showMass(createMassStudent);    //Выводим на консоль массив студентов
     }
 }

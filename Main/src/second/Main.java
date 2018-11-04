@@ -21,7 +21,7 @@ public class Main {
         student3.age = 24;
         student3.course = 3;
 
-        Student.createStudent("Вася","Вакуленко",35,1);
+        Student student4 = Student.createStudent("Вася","Вакуленко",35,1);
 
         student1.show();
         student2.show();

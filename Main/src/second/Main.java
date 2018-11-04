@@ -2,7 +2,7 @@ package second;
 
 public class Main {
     public static void main(String[] args) {
-
+        Student student;
         Student student1 = new Student();
         student1.name = "Максим";
         student1.surname = "Данилович";
@@ -28,5 +28,10 @@ public class Main {
         student3.show();
         student4.show();
 
+        Student studentMass = new Student();
+
+        studentMass.massStudent(student1,student2,student3,student4);
+
+        studentMass.showMass(studentMass);
     }
 }

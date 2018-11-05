@@ -31,5 +31,7 @@ public class Main {
         Student [] createMassStudent = Student.massStudent(student1,student2,student3,student4); //Создаем массив студентов
 
         Student.showMass(createMassStudent);    //Выводим на консоль массив студентов
+
+        Student.showStudent(createMassStudent);
     }
 }

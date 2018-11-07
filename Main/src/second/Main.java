@@ -34,9 +34,9 @@ public class Main {
 
         //Student.showStudent(createMassStudent);
 
-        Student [] massivCourse = Student.showStudent2(createMassStudent);  //Задание 39
-        Student.showMass(massivCourse);
+        //Student [] massivCourse = Student.showStudent2(createMassStudent);  //Задание 39
+        //Student.showMass(massivCourse);
 
-        //Student.qqqq(createMassStudent);
+        Student.qqqq(createMassStudent);
     }
 }

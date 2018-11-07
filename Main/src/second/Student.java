@@ -16,7 +16,7 @@ public class Student {
         student4.name = nameCreateStudent;
         student4.surname = surnameCreateStudent;
         student4.age = ageCreateStudent;
-        student4.age = courseCreateStudent;
+        student4.course = courseCreateStudent;
         return student4;
     }
 
@@ -88,27 +88,27 @@ public class Student {
         return massCourse;
     }
 
-    /**public static void qqqq(Student[] mass) {
+    public static void qqqq(Student[] mass) {
         int b = 0, c = 0, d = 0;
 
-        for (int i = 1; i < 5; i++) {
+        for (int i = 1; i <= 5; i++) {            //перебираем курсы
             for (int j = 1; j < mass.length; j++) {
-                if (mass[i].course == i) {
-                    b = b + mass[i].age; //считаем сумму возраста всех студентов курса
-                    c++;
+                if (mass[j].course == i) {
+                    b = b + mass[j].age; //считаем сумму возраста всех студентов курса
+                    c++;        //счетчик студентов
                 }
             }
             if (c == 0) {
-                System.out.println("На данном курсе никто не обучается");
+                System.out.println("На " + i + " курсе никто не обучается");
             }
             if (c != 0) {
                 d = b / c; //находим средний возрвст студентов курса
-                System.out.println("На" + i + "курсе средний возраст равен" + d);
+                System.out.println("На " + i + " курсе средний возраст равен " + d);
             }
             b = 0;
             c = 0;
         }
-    }*/
+    }
 }
 
 

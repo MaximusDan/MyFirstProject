@@ -36,5 +36,7 @@ public class Main {
 
         Student [] massivCourse = Student.showStudent2(createMassStudent);  //Задание 39
         Student.showMass(massivCourse);
+
+        //Student.qqqq(createMassStudent);
     }
 }

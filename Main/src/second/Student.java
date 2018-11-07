@@ -1,4 +1,6 @@
 package second;
+import first.Console;
+
 import java.util.ArrayList;
 public class Student {
     public String name;
@@ -66,25 +68,47 @@ public class Student {
     /**
      * Метод создания массива студентов определенного курса
      */
-    public static Student [] showStudent2(Student[] mass) {
-        int number =0; //счетчик размера нового массива студентов определенного курса
+    public static Student[] showStudent2(Student[] mass) {
+        int number = 0; //счетчик размера нового массива студентов определенного курса
         System.out.println("Введите курс");
-        int consoleCourse = first.Console.readFromConsoleIntValue();
+        int consoleCourse = Console.readFromConsoleIntValue();
         for (int i = 0; i < mass.length; i++) {
-            if(consoleCourse == mass[i].course){
-                number ++;
+            if (consoleCourse == mass[i].course) {
+                number++;
             }
         }
         Student[] massCourse = new Student[number]; //создаем массив студентов определенного курса
+        int x = 0;
         for (int i = 0; i < mass.length; i++) {
             if (consoleCourse == mass[i].course) {
-                for (int j = 0; j < massCourse.length; j++) {
-                    massCourse[j] = mass[i];
-                }
+                massCourse[x] = mass[i];
+                x++;
             }
         }
         return massCourse;
     }
+
+    /**public static void qqqq(Student[] mass) {
+        int b = 0, c = 0, d = 0;
+
+        for (int i = 1; i < 5; i++) {
+            for (int j = 1; j < mass.length; j++) {
+                if (mass[i].course == i) {
+                    b = b + mass[i].age; //считаем сумму возраста всех студентов курса
+                    c++;
+                }
+            }
+            if (c == 0) {
+                System.out.println("На данном курсе никто не обучается");
+            }
+            if (c != 0) {
+                d = b / c; //находим средний возрвст студентов курса
+                System.out.println("На" + i + "курсе средний возраст равен" + d);
+            }
+            b = 0;
+            c = 0;
+        }
+    }*/
 }
 
 

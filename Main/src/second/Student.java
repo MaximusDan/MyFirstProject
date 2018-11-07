@@ -57,11 +57,8 @@ public class Student {
         int consoleCourse = first.Console.readFromConsoleIntValue();
         for (int i = 0; i < mass.length; i++) {
             if(consoleCourse == mass[i].course){
-                System.out.println("Имя = " + mass[i].name);
-                System.out.println("Фомилия = " + mass[i].surname);
-                System.out.println("Возраст = " + mass[i].age);
-                System.out.println("Курс = " + mass[i].course);
-                System.out.println();
+                Student a = mass[i];
+                a.show();
             }
         }
     }

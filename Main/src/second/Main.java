@@ -7,7 +7,7 @@ public class Main {
         student1.name = "Максим";
         student1.surname = "Данилович";
         student1.age = 27;
-        student1.course = 5;
+        student1.course = 3;
 
         Student student2 = new Student();
         student2.name = "Юра";
@@ -30,8 +30,11 @@ public class Main {
 
         Student [] createMassStudent = Student.massStudent(student1,student2,student3,student4); //Создаем массив студентов
 
-        Student.showMass(createMassStudent);    //Выводим на консоль массив студентов
+        //Student.showMass(createMassStudent);    //Выводим на консоль массив студентов
 
-        Student.showStudent(createMassStudent);
+        //Student.showStudent(createMassStudent);
+
+        Student [] massivCourse = Student.showStudent2(createMassStudent);  //Задание 39
+        Student.showMass(massivCourse);
     }
 }

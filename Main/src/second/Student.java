@@ -1,5 +1,5 @@
 package second;
-
+import java.util.ArrayList;
 public class Student {
     public String name;
     public String surname;
@@ -61,6 +61,29 @@ public class Student {
                 a.show();
             }
         }
+    }
+
+    /**
+     * Метод создания массива студентов определенного курса
+     */
+    public static Student [] showStudent2(Student[] mass) {
+        int number =0; //счетчик размера нового массива студентов определенного курса
+        System.out.println("Введите курс");
+        int consoleCourse = first.Console.readFromConsoleIntValue();
+        for (int i = 0; i < mass.length; i++) {
+            if(consoleCourse == mass[i].course){
+                number ++;
+            }
+        }
+        Student[] massCourse = new Student[number]; //создаем массив студентов определенного курса
+        for (int i = 0; i < mass.length; i++) {
+            if (consoleCourse == mass[i].course) {
+                for (int j = 0; j < massCourse.length; j++) {
+                    massCourse[j] = mass[i];
+                }
+            }
+        }
+        return massCourse;
     }
 }
 

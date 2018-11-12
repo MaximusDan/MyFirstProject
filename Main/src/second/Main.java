@@ -22,13 +22,14 @@ public class Main {
         student3.course = 3;
 
         Student student4 = Student.createStudent("Вася","Вакуленко",35,1);
-
         student1.show();
         student2.show();
         student3.show();
         student4.show();
 
         Student [] createMassStudent = Student.massStudent(student1,student2,student3,student4); //Создаем массив студентов
+
+        Student student12 = Student.createObject();
 
         //Student.showMass(createMassStudent);    //Выводим на консоль массив студентов
 
@@ -38,5 +39,6 @@ public class Main {
         //Student.showMass(massivCourse);
 
         Student.qqqq(createMassStudent);
+
     }
 }

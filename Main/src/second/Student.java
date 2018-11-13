@@ -7,13 +7,15 @@ public class Student {
     public String surname;
     public int age;
     public int course;
-    public String [] massName = {"Петя","Ваня","Игорь","Юра","Влад","Сергей","Женя","Андрей","Миша","Гриша"};
-    public String [] massSurname = {"Данилович","Федорович","Пупкин","Грачев","Харламов","Янцевич","Грицкевич","Король","Филонюк","Ющенко"};
-    public int [] massCourse = {1,2,3,4,5};
-    public int [] massAge = {22,23,24,25,27,19,34,28,31,18};
+    public static  String [] massName = {"Петя","Ваня","Игорь","Юра","Влад","Сергей","Женя","Андрей","Миша","Гриша"};
+    public static String [] massSurname = {"Данилович","Федорович","Пупкин","Грачев","Харламов","Янцевич","Грицкевич","Король","Филонюк","Ющенко"};
+    public static int [] massCourse = {1,2,3,4,5};
+    public static int [] massAge = {22,23,24,25,27,19,34,28,31,18};
 
-
-    public Student createObject(Student a){
+    /**
+     * Метод создания объекта(студента)
+     */
+    public static Student createObject(){
         Student student123 = new Student();
         student123.name = massName[(int)(Math.random() * 10 + 1)];
         student123.surname = massSurname[(int)(Math.random() * 10 + 1)];

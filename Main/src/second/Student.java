@@ -17,10 +17,10 @@ public class Student {
      */
     public static Student createObject(){
         Student student123 = new Student();
-        student123.name = massName[(int)(Math.random() * 10 + 1)];
-        student123.surname = massSurname[(int)(Math.random() * 10 + 1)];
-        student123.course = massCourse[(int)(Math.random() * 5 + 1)];
-        student123.age = massAge[(int)(Math.random() * 10 + 1)];
+        student123.name = massName[(int)(Math.random() * 10)];
+        student123.surname = massSurname[(int)(Math.random() * 10)];
+        student123.course = massCourse[(int)(Math.random() * 6)];
+        student123.age = massAge[(int)(Math.random() * 10)];
         return student123;
     }
 

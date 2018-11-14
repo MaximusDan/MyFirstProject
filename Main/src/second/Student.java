@@ -48,12 +48,12 @@ public class Student {
     /**
      * Метод создания массива студентов
      */
-    public static Student [] massStudent(Student a, Student b, Student c, Student d) {
+    public static Student [] massStudent() {
         Student[] massStudent = new Student[4];
-        massStudent[0] = a;
-        massStudent[1] = b;
-        massStudent[2] = c;
-        massStudent[3] = d;
+        massStudent[0] = Student.createObject();
+        massStudent[1] = Student.createObject();
+        massStudent[2] = Student.createObject();
+        massStudent[3] = Student.createObject();
         return massStudent;
     }
     /**

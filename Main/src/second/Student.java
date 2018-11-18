@@ -61,11 +61,7 @@ public class Student {
      */
     public static void showMass(Student[] mass) {
        for (int i = 0; i < mass.length; i++) {
-           System.out.println("Имя = " + mass[i].name);
-           System.out.println("Фомилия = " + mass[i].surname);
-           System.out.println("Возраст = " + mass[i].age);
-           System.out.println("Курс = " + mass[i].course);
-           System.out.println();
+           mass[i].show();
        }
     }
     /**
@@ -125,6 +121,18 @@ public class Student {
             }
             b = 0;
             c = 0;
+        }
+    }
+    public static void studentNameAlfavit(Student [] mass){
+        String q = mass[1].name;
+        int t = 0;
+        for(int i=0;i<mass.length -1;i++){
+            for(int j=1;j<mass.length;j++){
+               if(mass[i].name.compareTo(mass[j].name)==1){
+                    j++;
+                    t++;
+                }
+            }
         }
     }
 }

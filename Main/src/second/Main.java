@@ -29,6 +29,7 @@ public class Main {
         Student [] createMassStudent = Student.massStudent(); //Создаем массив студентов №44
         Student.showMass(createMassStudent); //Выводим на консоль массив студентов
 
+        Student.studentNameAlfavit(createMassStudent);
         //student1.show();
         //student2.show();
         //student3.show();

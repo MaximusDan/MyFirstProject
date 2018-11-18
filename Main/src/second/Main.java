@@ -21,10 +21,10 @@ public class Main {
         student3.age = 24;
         student3.course = 3;
 
-        Student student4 = Student.createStudent("Вася","Вакуленко",35,1);
+        //Student student4 = Student.createStudent("Вася","Вакуленко",35,1);
 
-        Student student5 = Student.createObject(); // Создаем студента задание №43
-        student5.show();  // Выводим на консоль студента
+        //Student student5 = Student.createObject(); // Создаем студента задание №43
+        //student5.show();  // Выводим на консоль студента
 
         Student [] createMassStudent = Student.massStudent(); //Создаем массив студентов №44
         Student.showMass(createMassStudent); //Выводим на консоль массив студентов

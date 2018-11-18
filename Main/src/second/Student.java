@@ -19,7 +19,7 @@ public class Student {
         Student student123 = new Student();
         student123.name = massName[(int)(Math.random() * 10)];
         student123.surname = massSurname[(int)(Math.random() * 10)];
-        student123.course = massCourse[(int)(Math.random() * 6)];
+        student123.course = massCourse[(int)(Math.random() * 5)];
         student123.age = massAge[(int)(Math.random() * 10)];
         return student123;
     }
@@ -123,16 +123,19 @@ public class Student {
             c = 0;
         }
     }
-    public static void studentNameAlfavit(Student [] mass){
-        String q = mass[1].name;
-        int t = 0;
-        for(int i=0;i<mass.length -1;i++){
-            for(int j=1;j<mass.length;j++){
-               if(mass[i].name.compareTo(mass[j].name)==1){
-                    j++;
-                    t++;
+
+    public static void studentNameAlfavit(Student[] mass) {
+        for (int i = 0; i < mass.length -1; i++) {
+            for (int j = i+1; j < mass.length; j++) {
+                if (mass[i].name.compareTo(mass[j].name) == 1) {
+                    Student student = mass[i];
+                    mass[i] = mass[j];
+                    mass[j] = student;
                 }
             }
+        }
+        for (int i = 0; i < mass.length; i++) {
+            mass[i].show();
         }
     }
 }

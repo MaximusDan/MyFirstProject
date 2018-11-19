@@ -123,11 +123,13 @@ public class Student {
             c = 0;
         }
     }
-
+    /**
+     * Метод сортирует массив студентов в алфавитном порядке имён студентов
+     */
     public static void studentNameAlfavit(Student[] mass) {
         for (int i = 0; i < mass.length -1; i++) {
-            for (int j = i+1; j < mass.length; j++) {
-                if (mass[i].name.compareTo(mass[j].name) == 1) {
+            for (int j = i+1; j <mass.length; j++) {
+                if (mass[i].name.compareTo(mass[j].name) > 0) {
                     Student student = mass[i];
                     mass[i] = mass[j];
                     mass[j] = student;

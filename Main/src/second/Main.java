@@ -22,6 +22,10 @@ public class Main {
         student3.course = 3;
 
         //Student student4 = Student.createStudent("Вася","Вакуленко",35,1);
+        //student1.show();
+        //student2.show();
+        //student3.show();
+        //student4.show();
 
         //Student student5 = Student.createObject(); // Создаем студента задание №43
         //student5.show();  // Выводим на консоль студента
@@ -29,11 +33,7 @@ public class Main {
         Student [] createMassStudent = Student.massStudent(); //Создаем массив студентов №44
         Student.showMass(createMassStudent); //Выводим на консоль массив студентов
 
-        Student.studentNameAlfavit(createMassStudent);
-        //student1.show();
-        //student2.show();
-        //student3.show();
-        //student4.show();
+        Student.studentNameAlfavit(createMassStudent); //Массив студентов отсортируется в алфавитном порядке имён студентов №41
 
         //Student.showStudent(createMassStudent);
 

@@ -49,11 +49,12 @@ public class Student {
      * Метод создания массива студентов
      */
     public static Student [] massStudent() {
-        Student[] massStudent = new Student[4];
-        massStudent[0] = Student.createObject();
-        massStudent[1] = Student.createObject();
-        massStudent[2] = Student.createObject();
-        massStudent[3] = Student.createObject();
+        System.out.println("Введите колличество студентов");
+        int i = first.Console.readFromConsoleIntValue();
+        Student[] massStudent = new Student[i];
+        for (int j = 0; j < massStudent.length; j++) {
+            massStudent[j] = Student.createObject();
+        }
         return massStudent;
     }
     /**
@@ -139,6 +140,26 @@ public class Student {
         for (int i = 0; i < mass.length; i++) {
             mass[i].show();
         }
+    }
+    /**
+     * Метод выводит имя которое встречается чаще всего
+     */
+    public static void showMassNameStudent(Student[] mass) {
+        int a = 0, b = 0;
+        String topName = new String();
+        for (int i = 0; i < mass.length - 1; i++) {
+            for (int j = i + 1; j < mass.length; j++) {
+                if (mass[i].name.equals(mass[j].name) == true) {
+                    b++;
+                }
+            }
+            if (b > a) {
+                a = b;
+                topName = mass[i].name;
+            }
+            b = 0;
+        }
+        System.out.println("В данном массиве слудентов, имя " + topName + " встречается больше всего" );
     }
 }
 

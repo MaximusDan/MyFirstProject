@@ -30,10 +30,10 @@ public class Main {
         //Student student5 = Student.createObject(); // Создаем студента задание №43
         //student5.show();  // Выводим на консоль студента
 
-        Student [] createMassStudent = Student.massStudent(); //Создаем массив студентов №44
-        Student.showMass(createMassStudent); //Выводим на консоль массив студентов
+        //Student [] createMassStudent = Student.massStudent(); //Создаем массив студентов №44
+        //Student.showMass(createMassStudent); //Выводим на консоль массив студентов
 
-        Student.studentNameAlfavit(createMassStudent); //Массив студентов отсортируется в алфавитном порядке имён студентов №41
+        //Student.studentNameAlfavit(createMassStudent); // №41 Массив студентов отсортируется в алфавитном порядке имён студентов
 
         //Student.showStudent(createMassStudent);
 
@@ -42,5 +42,8 @@ public class Main {
 
         //Student.qqqq(createMassStudent);
 
+        Student [] createMassStudent2 = Student.massStudent(); // #42 Создает массив студентов
+        Student.showMass(createMassStudent2); // #42 Выводит массив на консоль
+        Student.showMassNameStudent(createMassStudent2); // #42 Вызывает метод, который выводит имя которое встречается в массиве чаще всего
     }
 }

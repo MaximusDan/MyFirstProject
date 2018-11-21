@@ -137,9 +137,7 @@ public class Student {
                 }
             }
         }
-        for (int i = 0; i < mass.length; i++) {
-            mass[i].show();
-        }
+        Student.showMass(mass);
     }
     /**
      * Метод выводит имя которое встречается чаще всего

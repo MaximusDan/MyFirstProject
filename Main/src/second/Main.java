@@ -42,8 +42,10 @@ public class Main {
 
         //Student.qqqq(createMassStudent);
 
-        Student [] createMassStudent2 = Student.massStudent(); // #42 Создает массив студентов
-        Student.showMass(createMassStudent2); // #42 Выводит массив на консоль
-        Student.showMassNameStudent(createMassStudent2); // #42 Вызывает метод, который выводит имя которое встречается в массиве чаще всего
+        //Student [] createMassStudent2 = Student.massStudent(); // #42 Создает массив студентов
+        //Student.showMass(createMassStudent2); // #42 Выводит массив на консоль
+        //Student.showMassNameStudent(createMassStudent2); // #42 Вызывает метод, который выводит имя которое встречается в массиве чаще всего
+
+        ClassFromBook.createMass();
     }
 }

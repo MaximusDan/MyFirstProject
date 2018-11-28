@@ -40,7 +40,7 @@ public class Console {
 			if (sc.hasNext()) {
 				return sc.nextLine();
 			} else {
-				System.out.println("Введенные символы не являются числом");
+				System.out.println("Введенные символы не являются текстом");
 			}
 		}
 	}

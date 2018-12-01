@@ -1,5 +1,5 @@
 package second;
-
+import first.Console;
 public class Main {
     public static void main(String[] args) {
         Student student;
@@ -48,8 +48,10 @@ public class Main {
 
         //ClassFromBook.createMass(); //Работа с классом ClassFromBook
 
-        //char [] mass = CustomString.toCharArray("wdgrthrrt");
+        //char [] mass = CustomString.toCharArray("wdgrthrrt"); //Работа с классом CustomString методом toCharArray
 
-        CustomString.equals();
+        //CustomString.equals();   //Работа с классом CustomString методом equals
+
+        customChar.isDigit('2');
     }
 }

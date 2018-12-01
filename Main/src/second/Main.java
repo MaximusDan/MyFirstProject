@@ -48,6 +48,8 @@ public class Main {
 
         //ClassFromBook.createMass(); //Работа с классом ClassFromBook
 
-        char [] mass = CustomString.toCharArray("wdgrthrrt");
+        //char [] mass = CustomString.toCharArray("wdgrthrrt");
+
+        CustomString.equals();
     }
 }

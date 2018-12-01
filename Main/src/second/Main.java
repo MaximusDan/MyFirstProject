@@ -46,6 +46,8 @@ public class Main {
         //Student.showMass(createMassStudent2); // #42 Выводит массив на консоль
         //Student.showMassNameStudent(createMassStudent2); // #42 Вызывает метод, который выводит имя которое встречается в массиве чаще всего
 
-        ClassFromBook.createMass();
+        //ClassFromBook.createMass(); //Работа с классом ClassFromBook
+
+        char [] mass = CustomString.toCharArray("wdgrthrrt");
     }
 }

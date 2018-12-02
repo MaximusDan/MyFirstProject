@@ -52,8 +52,8 @@ public class Main {
 
         //CustomString.equals();   //Работа с классом CustomString методом equals #47
 
-        //customChar.isDigit('2'); //Работа с классом customChar методом isDigit #48
+        //СustomChar.isDigit('2'); //Работа с классом СustomChar методом isDigit #48
 
-        //customChar.isDigit2('r'); //Работа с классом customChar методом isDigit #49
+        //СustomChar.isDigit2('r'); //Работа с классом СustomChar методом isDigit #49
     }
 }

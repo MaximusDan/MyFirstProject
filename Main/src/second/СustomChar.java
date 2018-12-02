@@ -1,17 +1,17 @@
 package second;
 
-public class customChar {
+public class СustomChar {
 
     /**
      *Создаем свой метод isDigit #48 Прверяем является ли символ числом
      */
     public static void isDigit(char d) {
 
-        int b = (int) d;
+        int symbol = (int) d;
 
-        System.out.println(b);
+        System.out.println(symbol);
 
-        if (b >= 48 && b <= 57 ) {
+        if (symbol >= 48 && symbol <= 57 ) {
             System.out.println("Данный символ является числом");
 
         } else {

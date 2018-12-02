@@ -15,6 +15,9 @@ public class CustomString {
         return createSymbolMass;
     }
 
+    /**
+     *Создаем свой метод equals #47 Сравниваем строки на равенство.
+     */
     public static void equals() {
         System.out.println("Введите первую строчку");
         String line1 = Console.readFromConsoleStringValue();
@@ -24,7 +27,7 @@ public class CustomString {
         char[] massLine1 = CustomString.toCharArray(line1);
         char[] massLine2 = CustomString.toCharArray(line2);
 
-        int a = 0;
+        boolean a = false;
 
         if (massLine1.length != massLine2.length) {
             System.out.println("Строки различны");
@@ -34,11 +37,11 @@ public class CustomString {
                     System.out.println("Строки различны");
                     break;
                 }else{
-                    a++;
+                    a = true;
                 }
             }
         }
-        if (a == massLine1.length){
+        if (a){
             System.out.println("Строки равны");
         }
     }

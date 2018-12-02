@@ -35,9 +35,8 @@ public class CustomString {
             for (int i = 0; i < massLine1.length; i++) {
                 if (massLine1[i] != massLine2[i]) {
                     System.out.println("Строки различны");
-                    break;
-                }else{
                     a = true;
+                    break;
                 }
             }
         }

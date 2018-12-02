@@ -35,4 +35,19 @@ public class customChar {
             System.out.println("Данный символ НЕ является заглавной буквой");
         }
     }
+
+
+    public static void isDigit3(char d) {
+
+        int b = (int) d;
+
+        System.out.println(b);
+
+        if (b >= 65 && b <= 90 ) {
+            System.out.println(d);
+
+        } else {
+            System.out.println("Данный символ НЕ является заглавной буквой");
+        }
+    }
 }

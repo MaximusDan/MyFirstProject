@@ -48,7 +48,7 @@ public class Main {
 
         //ClassFromBook.createMass(); //Работа с классом ClassFromBook
 
-        //char [] mass = CustomString.toCharArray("wdgrthrrt"); //Работа с классом CustomString методом toCharArray
+        //char [] mass = CustomString.toCharArray("wdgrthrrt"); //Работа с классом CustomString методом toCharArray #46
 
         //CustomString.equals();   //Работа с классом CustomString методом equals
 

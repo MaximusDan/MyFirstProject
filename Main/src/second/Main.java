@@ -50,8 +50,8 @@ public class Main {
 
         //char [] mass = CustomString.toCharArray("wdgrthrrt"); //Работа с классом CustomString методом toCharArray #46
 
-        //CustomString.equals();   //Работа с классом CustomString методом equals #46
+        //CustomString.equals();   //Работа с классом CustomString методом equals #47
 
-        customChar.isDigit('2');
+        customChar.isDigit('2'); //Работа с классом customChar методом isDigit #48
     }
 }

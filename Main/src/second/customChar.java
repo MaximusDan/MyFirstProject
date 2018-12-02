@@ -2,8 +2,11 @@ package second;
 
 public class customChar {
 
+    /**
+     *Создаем свой метод isDigit #48 Прверяем является ли символ числом
+     */
     public static void isDigit(char d) {
-        int a = 0;
+
         int b = (int) d;
 
         System.out.println(b);

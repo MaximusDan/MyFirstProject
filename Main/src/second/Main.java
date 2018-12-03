@@ -53,10 +53,12 @@ public class Main {
 
         //CustomString line1 = new CustomString(); //#47
         //CustomString line2 = new CustomString(); //#47
-        //line1.equals(line1,line2);   //Работа с классом CustomString методом equals #47
+        //line1.equals(line2);   //Работа с классом CustomString методом equals #47
 
         //СustomChar.isDigit('2'); //Работа с классом СustomChar методом isDigit #48
 
-        //СustomChar.isDigitBigSymbol('r'); //Работа с классом СustomChar методом isDigit #49
+        //СustomChar.isDigitBigSymbol('r'); //Работа с классом СustomChar методом isDigitBigSymbol #49
+
+        СustomChar.createBigSymbol('D');  //Преобразуем символ к верхнему регистру #50
     }
 }

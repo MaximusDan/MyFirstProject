@@ -21,11 +21,11 @@ String line;
     public void equals(CustomString line1,CustomString line2) {
 
         System.out.println("Введите первую строчку");
-        line1.line = Console.readFromConsoleStringValue();
+        this.line = Console.readFromConsoleStringValue();
         System.out.println("Введите вторую строчку");
         line2.line = Console.readFromConsoleStringValue();
 
-        char[] massLine1 = CustomString.toCharArray(line1.line);
+        char[] massLine1 = CustomString.toCharArray(this.line);
         char[] massLine2 = CustomString.toCharArray(line2.line);
 
         boolean a = true;

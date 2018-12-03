@@ -20,7 +20,7 @@ public class СustomChar {
     }
 
     /**
-     *Создаем свой метод isDigit2 #49 Прверяем является ли символ заглавной буквой
+     *Создаем свой метод isDigitBigSymbol #49 Прверяем является ли символ заглавной буквой
      */
     public static void isDigitBigSymbol(char d) {
 
@@ -48,6 +48,31 @@ public class СustomChar {
 
         } else {
             System.out.println("False");
+        }
+    }
+
+    /**
+     *Метод преобразует символ к верхнему реистру #50
+     */
+
+    public static void createBigSymbol(char d) {
+
+        int b = (int) d;
+
+        //System.out.println(b);
+
+        if (b >= 65 && b <= 90) {    //проверка если уже заглавная буква
+            System.out.println(d);
+
+        }
+        if (b >= 48 && b <= 57) {    //проверка если число
+            System.out.println(d);
+        }
+
+        if (b >= 97 && b <= 122) {
+            b = b - 32;
+            d = (char)b;
+            System.out.println(d);
         }
     }
 }

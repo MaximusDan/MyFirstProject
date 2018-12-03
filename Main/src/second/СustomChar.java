@@ -1,5 +1,5 @@
 package second;
-
+import first.Console;
 public class СustomChar {
 
     /**
@@ -96,4 +96,27 @@ public class СustomChar {
         }
     }
 
+    /**
+     *Метод вырезает из строки кусок и выводит его #52
+     */
+    public static void showString(int a, int b) {
+
+        System.out.println("Введите строку");
+        String line = Console.readFromConsoleStringValue();
+
+        int length = line.length();
+
+        char[] symbolMass = new char[length];
+
+        for (int i = 0; i < length; i++) {
+            symbolMass[i] = line.charAt(i);
+        }
+
+        for (int i = 0; i < a; i++) {
+            System.out.print(symbolMass[i]);
+        }
+        for (int i = b - 1; i < length; i++) {
+            System.out.print(symbolMass[i]);
+        }
+    }
 }

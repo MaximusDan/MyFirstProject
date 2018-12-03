@@ -61,6 +61,8 @@ public class Main {
 
         //СustomChar.createBigSymbol('d');  //Преобразуем символ к верхнему регистру #50
 
-        СustomChar.createSmallSymbol('D');  //Преобразуем символ к нижнему регистру #51
+        //СustomChar.createSmallSymbol('D');  //Преобразуем символ к нижнему регистру #51
+
+        СustomChar.showString(4,10); //Выводим из строки кусок #52
     }
 }

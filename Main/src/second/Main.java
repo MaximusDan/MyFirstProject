@@ -59,6 +59,8 @@ public class Main {
 
         //СustomChar.isDigitBigSymbol('r'); //Работа с классом СustomChar методом isDigitBigSymbol #49
 
-        СustomChar.createBigSymbol('D');  //Преобразуем символ к верхнему регистру #50
+        //СustomChar.createBigSymbol('d');  //Преобразуем символ к верхнему регистру #50
+
+        СustomChar.createSmallSymbol('D');  //Преобразуем символ к нижнему регистру #51
     }
 }

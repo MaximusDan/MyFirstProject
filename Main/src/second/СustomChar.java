@@ -59,8 +59,6 @@ public class СustomChar {
 
         int b = (int) d;
 
-        //System.out.println(b);
-
         if (b >= 65 && b <= 90) {    //проверка если уже заглавная буква
             System.out.println(d);
 
@@ -71,8 +69,31 @@ public class СustomChar {
 
         if (b >= 97 && b <= 122) {
             b = b - 32;
+            d = (char) b;
+            System.out.println(d);
+        }
+    }
+
+    /**
+     *Метод преобразует символ к нижнему реистру #51
+     */
+    public static void createSmallSymbol(char d) {
+
+        int b = (int) d;
+
+        if (b >= 97 && b <= 122) {    //проверка если уже НЕ заглавная буква
+            System.out.println(d);
+
+        }
+        if (b >= 48 && b <= 57) {    //проверка если число
+            System.out.println(d);
+        }
+
+        if (b >= 65 && b <= 90) {
+            b = b + 32;
             d = (char)b;
             System.out.println(d);
         }
     }
+
 }

@@ -63,6 +63,8 @@ public class Main {
 
         //СustomChar.createSmallSymbol('D');  //Преобразуем символ к нижнему регистру #51
 
-        СustomChar.showString(4,10); //Выводим из строки кусок #52
+        //СustomChar.showString(4,7); //Вырезаем строку и выводим оставшуюся часть #52
+
+        СustomChar.showSubString(4,7); //Выводим из строки кусок #53
     }
 }

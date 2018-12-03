@@ -1,7 +1,7 @@
 package second;
 import first.Console;
 public class CustomString {
-
+String line;
     /**
      *Создаем свой метод toCharArray #46 Разбиваем строку на массив символов.
      */
@@ -18,16 +18,17 @@ public class CustomString {
     /**
      *Создаем свой метод equals #47 Сравниваем строки на равенство.
      */
-    public static void equals() {
+    public void equals(CustomString line1,CustomString line2) {
+
         System.out.println("Введите первую строчку");
-        String line1 = Console.readFromConsoleStringValue();
+        line1.line = Console.readFromConsoleStringValue();
         System.out.println("Введите вторую строчку");
-        String line2 = Console.readFromConsoleStringValue();
+        line2.line = Console.readFromConsoleStringValue();
 
-        char[] massLine1 = CustomString.toCharArray(line1);
-        char[] massLine2 = CustomString.toCharArray(line2);
+        char[] massLine1 = CustomString.toCharArray(line1.line);
+        char[] massLine2 = CustomString.toCharArray(line2.line);
 
-        boolean a = false;
+        boolean a = true;
 
         if (massLine1.length != massLine2.length) {
             System.out.println("Строки различны");
@@ -35,7 +36,7 @@ public class CustomString {
             for (int i = 0; i < massLine1.length; i++) {
                 if (massLine1[i] != massLine2[i]) {
                     System.out.println("Строки различны");
-                    a = true;
+                    a = false;
                     break;
                 }
             }

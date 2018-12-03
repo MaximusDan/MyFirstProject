@@ -50,7 +50,10 @@ public class Main {
 
         //char [] mass = CustomString.toCharArray("wdgrthrrt"); //Работа с классом CustomString методом toCharArray #46
 
-        //CustomString.equals();   //Работа с классом CustomString методом equals #47
+
+        CustomString line1 = new CustomString(); //#47
+        CustomString line2 = new CustomString(); //#47
+        line1.equals(line1,line2);   //Работа с классом CustomString методом equals #47
 
         //СustomChar.isDigit('2'); //Работа с классом СustomChar методом isDigit #48
 

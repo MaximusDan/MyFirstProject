@@ -18,7 +18,7 @@ String line;
     /**
      *Создаем свой метод equals #47 Сравниваем строки на равенство.
      */
-    public void equals(CustomString line1,CustomString line2) {
+    public boolean equals(CustomString line2) {
 
         System.out.println("Введите первую строчку");
         this.line = Console.readFromConsoleStringValue();
@@ -31,18 +31,16 @@ String line;
         boolean a = true;
 
         if (massLine1.length != massLine2.length) {
-            System.out.println("Строки различны");
+            return false;
         } else {
             for (int i = 0; i < massLine1.length; i++) {
                 if (massLine1[i] != massLine2[i]) {
-                    System.out.println("Строки различны");
                     a = false;
-                    break;
+                    return false;
                 }
             }
         }
-        if (a){
-            System.out.println("Строки равны");
-        }
+            return true;
+
     }
 }

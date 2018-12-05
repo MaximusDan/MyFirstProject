@@ -53,18 +53,28 @@ public class Main {
 
         //CustomString line1 = new CustomString(); //#47
         //CustomString line2 = new CustomString(); //#47
-        //line1.equals(line2);   //Работа с классом CustomString методом equals #47
+        //boolean result = line1.equals(line2);   //Работа с классом CustomString методом equals #47
+        //System.out.println(result);  //#47
 
-        //СustomChar.isDigit('2'); //Работа с классом СustomChar методом isDigit #48
+        //boolean resultNumber = СustomChar.isDigit('f'); //Работа с классом СustomChar методом isDigit #48
+        //System.out.println(resultNumber);  //#48
 
-        //СustomChar.isDigitBigSymbol('r'); //Работа с классом СustomChar методом isDigitBigSymbol #49
+        //boolean resultBigNumber = СustomChar.isDigitBigSymbol('r'); //Работа с классом СustomChar методом isDigitBigSymbol #49
+        //System.out.println(resultBigNumber);   //#49
 
-        //СustomChar.createBigSymbol('d');  //Преобразуем символ к верхнему регистру #50
+        //char resultBigSymbol = СustomChar.createBigSymbol('I');  //Преобразуем символ к верхнему регистру #50
+        //System.out.println(resultBigSymbol);   //#50
 
-        //СustomChar.createSmallSymbol('D');  //Преобразуем символ к нижнему регистру #51
+        //char resultSmallSymbol = СustomChar.createSmallSymbol('D');  //Преобразуем символ к нижнему регистру #51
+        //System.out.println(resultSmallSymbol);   //#51
 
-        //СustomChar.showString(4,7); //Вырезаем строку и выводим оставшуюся часть #52
-
-        СustomChar.showSubString(4,7); //Выводим из строки кусок #53
+        //char [] line = СustomChar.showString(4,7); //Вырезаем строку и выводим оставшуюся часть #52
+        //for (int i = 0; i < line.length; i++) {   //#53
+        //  System.out.print(line[i]);
+        //}
+        //char [] line1 = СustomChar.showSubString(4,7); //Выводим из строки кусок #53
+        //for (int i = 0; i < line1.length; i++) {   //#53
+        //   System.out.print(line[i]);    //#53
+        //}
     }
 }

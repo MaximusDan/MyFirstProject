@@ -24,13 +24,25 @@ public class CustomString {
      */
     public boolean equals(CustomString line2) {
 
-        System.out.println("Введите первую строчку");
-        this.line = Console.readFromConsoleStringValue();
-        System.out.println("Введите вторую строчку");
-        line2.line = Console.readFromConsoleStringValue();
+        CustomString line1NotNull = new CustomString();    //созддим 2 объекта которые прировняем к обьктам которые не null;
+        CustomString line2NotNull = new CustomString();
 
-        char[] massLine1 = CustomString.toCharArray(this.line);
-        char[] massLine2 = CustomString.toCharArray(line2.line);
+        while (true) {
+            System.out.println("Введите первую строчку");
+            this.line = Console.readFromConsoleStringValue();
+            System.out.println("Введите вторую строчку");
+            line2.line = Console.readFromConsoleStringValue();
+            if (this.line == null || line2.line == null) {
+                System.out.println("Строка не должна быть null");
+            }else{
+                line1NotNull.line = this.line;
+                line2NotNull.line = line2.line;
+                break;
+            }
+        }
+
+        char[] massLine1 = CustomString.toCharArray(line1NotNull.line);
+        char[] massLine2 = CustomString.toCharArray(line2NotNull.line);
 
         boolean a = true;
 

@@ -4,7 +4,7 @@ import first.Console;
 import java.util.Arrays;
 
 public class ClassFromBook {
-    public static  String [] mass;
+    public static  String[] mass;
 
     public static void createMass() {
         System.out.println("Введите длину массива");
@@ -31,7 +31,7 @@ public class ClassFromBook {
     /**
      * Сортировка массива по длине
      */
-    public static void arraySort(String [] mass2){
+    public static void arraySort(String[] mass2){
     Arrays.sort(mass2);
         for (int i = 0; i < mass2.length; i++) {
             System.out.println(mass2[i]);
@@ -98,7 +98,7 @@ public class ClassFromBook {
     /**
      * Метод определяет явзяется ли 2 символ самой короткой строки цифрой.
      */
-    public static void shotLine(String [] mass2) {
+    public static void shotLine(String[] mass2) {
         int a = mass2[0].length(), b = 0;
         for (int i = 1; i < mass2.length; i++) {
             int longString = mass2[i].length();

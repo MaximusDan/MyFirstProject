@@ -1,26 +1,28 @@
 package second;
+
 import first.Console;
 
 import java.util.ArrayList;
+
 public class Student {
     public String name;
     public String surname;
     public int age;
     public int course;
-    public static  String [] massName = {"Петя","Ваня","Игорь","Юра","Влад","Сергей","Женя","Андрей","Миша","Гриша"};
-    public static String [] massSurname = {"Данилович","Федорович","Пупкин","Грачев","Харламов","Янцевич","Грицкевич","Король","Филонюк","Ющенко"};
-    public static int [] massCourse = {1,2,3,4,5};
-    public static int [] massAge = {22,23,24,25,27,19,34,28,31,18};
+    public static String[] massName = {"Петя", "Ваня", "Игорь", "Юра", "Влад", "Сергей", "Женя", "Андрей", "Миша", "Гриша"};
+    public static String[] massSurname = {"Данилович", "Федорович", "Пупкин", "Грачев", "Харламов", "Янцевич", "Грицкевич", "Король", "Филонюк", "Ющенко"};
+    public static int[] massCourse = {1, 2, 3, 4, 5};
+    public static int[] massAge = {22, 23, 24, 25, 27, 19, 34, 28, 31, 18};
 
     /**
      * Метод создания объекта(студента)
      */
-    public static Student createObject(){
+    public static Student createObject() {
         Student student123 = new Student();
-        student123.name = massName[(int)(Math.random() * 10)];
-        student123.surname = massSurname[(int)(Math.random() * 10)];
-        student123.course = massCourse[(int)(Math.random() * 5)];
-        student123.age = massAge[(int)(Math.random() * 10)];
+        student123.name = massName[(int) (Math.random() * 10)];
+        student123.surname = massSurname[(int) (Math.random() * 10)];
+        student123.course = massCourse[(int) (Math.random() * 5)];
+        student123.age = massAge[(int) (Math.random() * 10)];
         return student123;
     }
 
@@ -28,7 +30,7 @@ public class Student {
     /**
      * Метод создания студента
      */
-    public  static Student createStudent(String nameCreateStudent, String surnameCreateStudent, int ageCreateStudent, int courseCreateStudent) {
+    public static Student createStudent(String nameCreateStudent, String surnameCreateStudent, int ageCreateStudent, int courseCreateStudent) {
         Student student4 = new Student();
         student4.name = nameCreateStudent;
         student4.surname = surnameCreateStudent;
@@ -45,10 +47,11 @@ public class Student {
         System.out.println();
 
     }
+
     /**
      * Метод создания массива студентов
      */
-    public static Student [] massStudent() {
+    public static Student[] massStudent() {
         System.out.println("Введите колличество студентов");
         int i = first.Console.readFromConsoleIntValue();
         Student[] massStudent = new Student[i];
@@ -57,14 +60,16 @@ public class Student {
         }
         return massStudent;
     }
+
     /**
      * Метод вывода массива студентов
      */
     public static void showMass(Student[] mass) {
-       for (int i = 0; i < mass.length; i++) {
-           mass[i].show();
-       }
+        for (int i = 0; i < mass.length; i++) {
+            mass[i].show();
+        }
     }
+
     /**
      * Метод вывода студента определенного курса
      */
@@ -72,7 +77,7 @@ public class Student {
         System.out.println("Введите курс");
         int consoleCourse = first.Console.readFromConsoleIntValue();
         for (int i = 0; i < mass.length; i++) {
-            if(consoleCourse == mass[i].course){
+            if (consoleCourse == mass[i].course) {
                 Student a = mass[i];
                 a.show();
             }
@@ -124,12 +129,13 @@ public class Student {
             c = 0;
         }
     }
+
     /**
      * Метод сортирует массив студентов в алфавитном порядке имён студентов
      */
     public static void studentNameAlfavit(Student[] mass) {
-        for (int i = 0; i < mass.length -1; i++) {
-            for (int j = i+1; j <mass.length; j++) {
+        for (int i = 0; i < mass.length - 1; i++) {
+            for (int j = i + 1; j < mass.length; j++) {
                 if (mass[i].name.compareTo(mass[j].name) > 0) {
                     Student student = mass[i];
                     mass[i] = mass[j];
@@ -139,6 +145,7 @@ public class Student {
         }
         Student.showMass(mass);
     }
+
     /**
      * Метод выводит имя которое встречается чаще всего
      */
@@ -157,8 +164,6 @@ public class Student {
             }
             b = 0;
         }
-        System.out.println("В данном массиве слудентов, имя " + topName + " встречается больше всего" );
+        System.out.println("В данном массиве слудентов, имя " + topName + " встречается больше всего");
     }
 }
-
-

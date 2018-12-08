@@ -1,5 +1,5 @@
 package second;
-import first.Console;
+
 public class Main {
     public static void main(String[] args) {
         Student student;
@@ -68,13 +68,10 @@ public class Main {
         //char resultSmallSymbol = СustomChar.createSmallSymbol('D');  //Преобразуем символ к нижнему регистру #51
         //System.out.println(resultSmallSymbol);   //#51
 
-        //char [] line = СustomChar.showString(4,7); //Вырезаем строку и выводим оставшуюся часть #52
-        //for (int i = 0; i < line.length; i++) {   //#53
-        //  System.out.print(line[i]);
-        //}
-        //char [] line1 = СustomChar.showSubString(4,7); //Выводим из строки кусок #53
-        //for (int i = 0; i < line1.length; i++) {   //#53
-        //   System.out.print(line[i]);    //#53
-        //}
+        //String line = CustomString.showString(4,7); //Вырезаем строку и выводим оставшуюся часть #52
+        //System.out.println(line);     //#52
+
+        //String line1 = CustomString.showSubString(4,7); //Вырезаем строку и выводим из строки кусок #53
+        //System.out.print(line1);    //#53
     }
 }

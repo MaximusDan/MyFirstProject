@@ -51,11 +51,11 @@ public class Main {
         //char [] mass = CustomString.toCharArray("wdgrthrrt"); //Работа с классом CustomString методом toCharArray #46
 
 
-            CustomString line1 = new CustomString(); //#47
-            CustomString line2 = new CustomString(); //#47
+        //CustomString line1 = new CustomString(); //#47
+        //CustomString line2 = new CustomString(); //#47
 
-            boolean result = line1.equals(line2);   //Работа с классом CustomString методом equals #47
-            System.out.println(result);  //#47
+        //boolean result = line1.equals(line2);   //Работа с классом CustomString методом equals #47
+        //System.out.println(result);  //#47
 
         //boolean result = line1.equals(line2);   //Работа с классом CustomString методом equals #47
         //System.out.println(result);  //#47
@@ -77,5 +77,7 @@ public class Main {
 
         //String line1 = CustomString.showSubString(4,7); //Вырезаем строку и выводим из строки кусок #53
         //System.out.print(line1);    //#53
+
+        TaskBook.createMass();
     }
 }

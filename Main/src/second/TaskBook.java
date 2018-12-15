@@ -18,7 +18,7 @@ public class TaskBook {
         //TaskBook.bookTaskShowMaxLine(mass);   //4) Выводим номер строки с максимальной цифрой
         //TaskBook.bookTaskDeleteLetters(mass);  //5) Удаляем из i-ой строки все заглавные буквы
         //TaskBook.bookTaskDeleteSymbol(mass);  //6) Удаляем из i-ой строки все символы кроме букв и цифр
-        //TaskBook.bookTaskShowLineWithNumeral(mass);  //7) Выводим из i-ой строки все слова содержащие цифры
+        TaskBook.bookTaskShowLineWithNumeral(mass);  //7) Выводим из i-ой строки все слова содержащие цифры
         //TaskBook.bookTaskShowSumNumeral(mass);  //8) Находим сумму всех цифр i-ой строки
         //TaskBook.bookTaskShowSmallLine(mass);  //9) Выводим из массива все слова содержащие только прописные буквы
         //TaskBook.bookTaskShowAllNumeral(mass);  //10) Выводим все числа из строк
@@ -131,9 +131,8 @@ public class TaskBook {
         for (int i = 0; i < splitMass.length; i++) {
             char[] toCharArrayMass = CustomString.toCharArray(splitMass[i]);
             for (int j = 0; j < toCharArrayMass.length; j++) {
-                int indexMass = (int) toCharArrayMass[j];
-                if (indexMass >= 48 && indexMass <= 57) {
-                    System.out.println("В слове " + splitMass[i] + " находится символ");
+                if (Character.isDigit(toCharArrayMass[j])) {
+                    System.out.println("В слове " + splitMass[i] + " находится цифра");
                     break;
                 }
             }
@@ -174,8 +173,7 @@ public class TaskBook {
             for (int j = 0; j < splitMass.length; j++) {
                 char[] toCharArrayMass = CustomString.toCharArray(splitMass[j]);   //разбиваем слово на массив символов
                 for (int k = 0; k < toCharArrayMass.length; k++) {
-                    int symbol = (int) toCharArrayMass[k];
-                    if (symbol >= 97 && symbol <=122) {
+                    if (Character.isLetter(toCharArrayMass[k])&&Character.isLowerCase(toCharArrayMass[k])) {  //проверяем является ли символ буквой и являтся ли эта буква прописной
                         index++;
                     }
                 }
@@ -196,8 +194,7 @@ public class TaskBook {
         for (int i = 0; i < mass.length; i++) {
             char[] toCharArrayMass = CustomString.toCharArray(mass[i]);
             for (int j = 0; j < toCharArrayMass.length; j++) {
-                int symbol = (int) toCharArrayMass[j];
-                if (symbol >= 48 && symbol <= 57) {
+                if (Character.isDigit(toCharArrayMass[j])==true) {
                     System.out.println(toCharArrayMass[j]);
                 }
             }

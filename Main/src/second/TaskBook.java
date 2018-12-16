@@ -15,10 +15,10 @@ public class TaskBook {
         //TaskBook.bookTask(mass);  //1) Сортировка строк массива по количеству слов в строке
         //TaskBook.bookTaskShowLength(mass);   //2) Выводим значения длинн всех строк массива
         //TaskBook.bookTaskShowLine(mass);   //3) Выводим строки с i по j из массива
-        //TaskBook.bookTaskShowMaxLine(mass);   //4) Выводим номер строки с максимальной цифрой
+        TaskBook.bookTaskShowMaxLine(mass);   //4) Выводим номер строки с максимальной цифрой
         //TaskBook.bookTaskDeleteLetters(mass);  //5) Удаляем из i-ой строки все заглавные буквы
         //TaskBook.bookTaskDeleteSymbol(mass);  //6) Удаляем из i-ой строки все символы кроме букв и цифр
-        TaskBook.bookTaskShowLineWithNumeral(mass);  //7) Выводим из i-ой строки все слова содержащие цифры
+        //TaskBook.bookTaskShowLineWithNumeral(mass);  //7) Выводим из i-ой строки все слова содержащие цифры
         //TaskBook.bookTaskShowSumNumeral(mass);  //8) Находим сумму всех цифр i-ой строки
         //TaskBook.bookTaskShowSmallLine(mass);  //9) Выводим из массива все слова содержащие только прописные буквы
         //TaskBook.bookTaskShowAllNumeral(mass);  //10) Выводим все числа из строк
@@ -77,16 +77,15 @@ public class TaskBook {
      * @param mass
      */
     public static void bookTaskShowMaxLine(String[] mass) {
-        int index = 48, indexLine = 0;
+        int index = 0, indexLine = 0;     //index счетчик максимальной цифры,  indexline счетчик строки с максимальной цифрой
 
         for (int i = 0; i < mass.length; i++) {
             char[] createSymbol = new char[mass[i].length()];
             for (int j = 0; j < mass[i].length(); j++) {
                 createSymbol[j] = mass[i].charAt(j);
-                int symbol = (int) createSymbol[j];
-                if (symbol > index && symbol < 58) {
-                    indexLine = i;
-                    index = symbol;
+                if (Character.isDigit(createSymbol[j]) == true && Character.getNumericValue(createSymbol[j]) > index) {
+                        indexLine = i;
+                        index = Character.getNumericValue(createSymbol[j]);
                 }
             }
         }

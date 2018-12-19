@@ -4,10 +4,10 @@ import first.Console;
 
 public class TaskBook {
 
-    public static void createMass(){
+    public static void createMass() {
 
         System.out.println("Введите количество строк в массиве");
-        String [] mass = new String [Console.readFromConsoleIntValue()];
+        String[] mass = new String[Console.readFromConsoleIntValue()];
         for (int i = 0; i < mass.length; i++) {
             System.out.println("Введите строку");
             mass[i] = Console.readFromConsoleStringValue();
@@ -32,9 +32,9 @@ public class TaskBook {
 
         for (int i = 0; i < mass.length - 1; i++) {
             String[] splitMass1 = mass[i].split(" ");
-            for(int j=i+1; j<mass.length;j++){
+            for (int j = i + 1; j < mass.length; j++) {
                 String[] splitMass2 = mass[j].split(" ");
-                if(splitMass2.length > splitMass1.length ){
+                if (splitMass2.length > splitMass1.length) {
                     String line = mass[i];
                     mass[i] = mass[j];
                     mass[j] = line;

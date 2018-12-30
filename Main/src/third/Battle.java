@@ -36,24 +36,12 @@ public class Battle {
         System.out.println();
 
         while (true) {
-            firstFighter = Battle.createNumber(); //рандомный воин первой команды
-            secondFighter = Battle.createNumber();  //рандомный воин второй команды
 
-            while (true) {     //проверка на то что бы хп бойца из первой команды были больше 0
-                if (firstCommand[firstFighter].health <= 0) {
-                    firstFighter = Battle.createNumber();
-                } else
-                    break;
-            }
-            while (true) {      //проверка на то что бы хп бойца из второй команды были больше 0
-                if (secondCommand[secondFighter].health <= 0) {
-                    secondFighter = Battle.createNumber();
-                } else
-                    break;
-            }
+            firstFighter = Battle.checkNull(firstCommand);  //рандомный воин первой команды
+            secondFighter = Battle.checkNull(secondCommand);  //рандомный воин второй команды
+
 
             Battle.showFighters(firstCommand,secondCommand);
-
 
             int createRandomAtack = (int) (Math.random() * 2); //данная переменная служит для выбора рандомной атаки (обычная или крит)
                                                                 //если переменная равна 0 - то крит, если 1 - то обычня атака
@@ -76,28 +64,37 @@ public class Battle {
             kill02 = Battle.checkKillCommand(secondCommand);
 
 
-            /**Boolean exit =
+            Boolean exit = Battle.checkKillCommand1(kill01,kill02);
                     if(exit){
                         break;
-                    }*/
-            if (kill01 == 6) {
-                System.out.println("Первая команда проиграла");
-                break;
-            }
-            if (kill02 == 6) {
+                    }
 
-                System.out.println("Вторая команда проиграла");
-                break;
-            }
-            if (kill01 == 6 && kill02 == 6) {
-                System.out.println("Ничья");
-                break;
-            }
             kill01 = 0;
             kill02 = 0;
         }
     }
 
+    /**
+     * проверяем мертв ли боец
+     * @param command
+     * @return
+     */
+    public static int checkNull(Battle[] command) {
+        int fighter;
+        while (true) {     //проверка на то что бы хп бойца из первой команды были больше 0
+            fighter = Battle.createNumber();
+            if (command[fighter].health <= 0) {
+                fighter = Battle.createNumber();
+            } else
+                return fighter;
+        }
+    }
+
+    /**
+     * Выводим на экран хп бойцов двух команд
+     * @param command1
+     * @param command2
+     */
     public static void showFighters(Battle[] command1, Battle[] command2){
 
         System.out.println("Хпшки бойцов двух команд");
@@ -139,7 +136,19 @@ public class Battle {
         return kill;
     }
 
-    public static int checkKillCommand(Battle [] checkCommand){
-
+    public static boolean checkKillCommand1(int first, int second){  //проверяем погибли ли все 6 человек в команде
+        if (first == 6) {
+            System.out.println("Первая команда проиграла");
+            return true;
+        }
+        if (second == 6) {
+            System.out.println("Вторая команда проиграла");
+            return true;
+        }
+        if (first == 6 && second == 6) {
+            System.out.println("Ничья");
+            return true;
+        }
+        return false;
     }
 }
